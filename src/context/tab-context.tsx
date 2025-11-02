@@ -27,6 +27,7 @@ interface TabContextType {
   canGoBack: (tabId?: string) => boolean;
   canGoForward: (tabId?: string) => boolean;
   setTabName: (id: string, name: string) => void;
+  reorderTabs: (draggedId: string, targetId: string) => void;
 }
 
 const TabContext = createContext<TabContextType | undefined>(undefined);
@@ -37,8 +38,74 @@ export const useTabs = () => {
   return context;
 };
 
+// Cache for pages.json data
+let pagesDataCache: Array<{ url: string; title: string }> | null = null;
+
 // Helper function to get tab name from address
-const getTabName = (address: string, currentName: string): string => {
+const getTabName = async (address: string, currentName: string): Promise<string> => {
+  try {
+    const url = new URL(
+      address.startsWith("http") ? address : `https://${address}`
+    );
+
+    // Google search results
+    if (url.searchParams.has("q")) {
+      return `${url.searchParams.get("q")} - Google Search`;
+    }
+    
+    // Google home page
+    if ((url.hostname === "www.google.com" || url.hostname === "google.com") && url.pathname === "/" && !url.search) {
+      return "Google";
+    }
+
+    // Gemini assistant
+    if (url.hostname === "gemini.google.com" && url.pathname === "/app/vnr202-assistance") {
+      return "VNR202 Assistance";
+    }
+
+    // vnr202-nhom5.com content pages
+    if (url.hostname === "vnr202-nhom5.com") {
+      // Load pages.json if not cached
+      if (!pagesDataCache) {
+        try {
+          const response = await fetch("/pages.json");
+          const data = await response.json();
+          pagesDataCache = data.map((item: { url: string; title: string }) => ({
+            url: item.url,
+            title: item.title,
+          }));
+        } catch (error) {
+          console.error("Failed to load pages.json:", error);
+          pagesDataCache = [];
+        }
+      }
+
+      // Find matching page
+      const fullUrl = url.toString();
+      const matchedPage = pagesDataCache?.find((page) => {
+        try {
+          const pageUrl = new URL(page.url);
+          return pageUrl.hostname === url.hostname && pageUrl.pathname === url.pathname;
+        } catch {
+          return false;
+        }
+      });
+
+      if (matchedPage) {
+        return matchedPage.title;
+      }
+    }
+
+    // Fallback to current name or hostname
+    return currentName || url.hostname;
+  } catch {
+    // If URL parsing fails, return the address or current name
+    return currentName || address;
+  }
+};
+
+// Synchronous version for immediate use (falls back to loading async)
+const getTabNameSync = (address: string, currentName: string): string => {
   try {
     const url = new URL(
       address.startsWith("http") ? address : `https://${address}`
@@ -46,13 +113,33 @@ const getTabName = (address: string, currentName: string): string => {
 
     if (url.searchParams.has("q")) {
       return `${url.searchParams.get("q")} - Google Search`;
-    } else if (url.pathname === "/") {
+    }
+    
+    if ((url.hostname === "www.google.com" || url.hostname === "google.com") && url.pathname === "/" && !url.search) {
       return "Google";
     }
-    // For other cases, return the current name or a default
+
+    if (url.hostname === "gemini.google.com" && url.pathname === "/app/vnr202-assistance") {
+      return "VNR202 Assistance";
+    }
+
+    // For vnr202-nhom5.com, try to use cached data or return a better default
+    if (url.hostname === "vnr202-nhom5.com" && pagesDataCache) {
+      const matchedPage = pagesDataCache.find((page) => {
+        try {
+          const pageUrl = new URL(page.url);
+          return pageUrl.hostname === url.hostname && pageUrl.pathname === url.pathname;
+        } catch {
+          return false;
+        }
+      });
+      if (matchedPage) {
+        return matchedPage.title;
+      }
+    }
+
     return currentName || url.hostname;
   } catch {
-    // If URL parsing fails, return the address or current name
     return currentName || address;
   }
 };
@@ -63,7 +150,6 @@ export default function TabProvider({ children }: { children: ReactNode }) {
     {
       id: "0",
       name: "Google",
-      canNotClose: true,
       address: "https://www.google.com",
       history: ["https://www.google.com"],
       historyIndex: 0,
@@ -100,9 +186,6 @@ export default function TabProvider({ children }: { children: ReactNode }) {
 
   // Close a tab
   const closeTab = (id: string) => {
-    // Prevent closing the main tab
-    if (id === "0") return;
-
     setAvailableTabs((prevTabs) => {
       const tabIndex = prevTabs.findIndex((tab) => tab.id === id);
       if (tabIndex === -1) return prevTabs;
@@ -112,8 +195,12 @@ export default function TabProvider({ children }: { children: ReactNode }) {
 
       // If we're closing the active tab, switch to another one
       if (id === activeTabId) {
-        const newActiveTab = updatedTabs[tabIndex - 1] || updatedTabs[0];
-        setActiveTabId(newActiveTab.id);
+        // If closing the first tab, switch to the next one (which becomes first)
+        // Otherwise, try previous tab, then fallback to first tab
+        const newActiveTab = updatedTabs[tabIndex - 1] || updatedTabs[0] || updatedTabs[tabIndex];
+        if (newActiveTab) {
+          setActiveTabId(newActiveTab.id);
+        }
       }
 
       return updatedTabs;
@@ -137,8 +224,15 @@ export default function TabProvider({ children }: { children: ReactNode }) {
           tab.history?.slice(0, (tab.historyIndex || 0) + 1) || [];
         newHistory.push(newAddress);
 
-        // Get new name
-        const newName = getTabName(newAddress, tab.name);
+        // Get new name (use sync version for immediate update)
+        const newName = getTabNameSync(newAddress, tab.name);
+        
+        // Also update async for better accuracy
+        getTabName(newAddress, tab.name).then((asyncName) => {
+          if (asyncName !== newName) {
+            setTabName(id, asyncName);
+          }
+        });
 
         return {
           ...tab,
@@ -166,7 +260,7 @@ export default function TabProvider({ children }: { children: ReactNode }) {
         if (currentIndex > 0) {
           const newIndex = currentIndex - 1;
           const newAddress = tab.history?.[newIndex] || tab.address;
-          const newName = getTabName(newAddress, tab.name);
+          const newName = getTabNameSync(newAddress, tab.name);
           return {
             ...tab,
             address: newAddress,
@@ -190,7 +284,7 @@ export default function TabProvider({ children }: { children: ReactNode }) {
         if (currentIndex < maxIndex) {
           const newIndex = currentIndex + 1;
           const newAddress = tab.history?.[newIndex] || tab.address;
-          const newName = getTabName(newAddress, tab.name);
+          const newName = getTabNameSync(newAddress, tab.name);
           return {
             ...tab,
             address: newAddress,
@@ -225,6 +319,50 @@ export default function TabProvider({ children }: { children: ReactNode }) {
       })
     );
   };
+
+  // Reorder tabs
+  const reorderTabs = (draggedId: string, targetId: string) => {
+    setAvailableTabs((prevTabs) => {
+      const draggedIndex = prevTabs.findIndex((tab) => tab.id === draggedId);
+      const targetIndex = prevTabs.findIndex((tab) => tab.id === targetId);
+
+      if (draggedIndex === -1 || targetIndex === -1 || draggedIndex === targetIndex) {
+        return prevTabs;
+      }
+
+      const newTabs = [...prevTabs];
+      const [draggedTab] = newTabs.splice(draggedIndex, 1);
+      newTabs.splice(targetIndex, 0, draggedTab);
+
+      return newTabs;
+    });
+  };
+
+  // Load pages.json on mount to cache titles
+  React.useEffect(() => {
+    fetch("/pages.json")
+      .then((res) => res.json())
+      .then((data) => {
+        pagesDataCache = data.map((item: { url: string; title: string }) => ({
+          url: item.url,
+          title: item.title,
+        }));
+        // Update existing tabs with correct names
+        setAvailableTabs((prevTabs) =>
+          prevTabs.map((tab) => {
+            const newName = getTabNameSync(tab.address, tab.name);
+            if (newName !== tab.name) {
+              return { ...tab, name: newName };
+            }
+            return tab;
+          })
+        );
+      })
+      .catch((error) => {
+        console.error("Failed to load pages.json:", error);
+      });
+  }, []);
+
   // Add to context value:
   return (
     <TabContext.Provider
@@ -241,6 +379,7 @@ export default function TabProvider({ children }: { children: ReactNode }) {
         canGoBack,
         canGoForward,
         setTabName,
+        reorderTabs,
       }}
     >
       {children}

@@ -2,10 +2,12 @@
 
 import { X, Plus } from "lucide-react";
 import { useTabs } from "../../context/tab-context";
-import { useEffect } from "react";
-import { v4 as uuid } from "uuid";
+import { useEffect, useState } from "react";
+
 export default function TabBar() {
-  const { availableTabs, activeTabId, setActiveTabId, closeTab, openTab } = useTabs();
+  const { availableTabs, activeTabId, setActiveTabId, closeTab, openTab, reorderTabs } = useTabs();
+  const [draggedTabId, setDraggedTabId] = useState<string | null>(null);
+  const [dragOverTabId, setDragOverTabId] = useState<string | null>(null);
 
   const handleNewTab = () => {
     const newTabId = `tab-${Date.now()}`;
@@ -23,7 +25,8 @@ export default function TabBar() {
       // Ctrl+W or Cmd+W - Close Tab
       if ((e.ctrlKey || e.metaKey) && e.key === 'w') {
         e.preventDefault();
-        if (activeTabId !== "0") {
+        const activeTab = availableTabs.find(tab => tab.id === activeTabId);
+        if (activeTab && !activeTab.canNotClose) {
           closeTab(activeTabId);
         }
       }
@@ -31,29 +34,78 @@ export default function TabBar() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [activeTabId]);
+  }, [activeTabId, availableTabs, closeTab]);
 
   useEffect(() => {}, [availableTabs]);
+
+  const handleDragStart = (e: React.DragEvent, tabId: string) => {
+    setDraggedTabId(tabId);
+    e.dataTransfer.effectAllowed = "move";
+    e.dataTransfer.setData("text/html", tabId);
+    // Add slight delay to improve drag feel
+    setTimeout(() => {
+      if (e.target instanceof HTMLElement) {
+        e.target.style.opacity = "0.5";
+      }
+    }, 0);
+  };
+
+  const handleDragEnd = (e: React.DragEvent) => {
+    if (e.target instanceof HTMLElement) {
+      e.target.style.opacity = "1";
+    }
+    setDraggedTabId(null);
+    setDragOverTabId(null);
+  };
+
+  const handleDragOver = (e: React.DragEvent, tabId: string) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+    if (draggedTabId && draggedTabId !== tabId) {
+      setDragOverTabId(tabId);
+    }
+  };
+
+  const handleDragLeave = () => {
+    setDragOverTabId(null);
+  };
+
+  const handleDrop = (e: React.DragEvent, targetTabId: string) => {
+    e.preventDefault();
+    if (draggedTabId && draggedTabId !== targetTabId) {
+      reorderTabs(draggedTabId, targetTabId);
+    }
+    setDraggedTabId(null);
+    setDragOverTabId(null);
+  };
 
   return (
     <div className="flex items-end bg-gray-200 px-2 pt-2 border-b border-gray-300 gap-1">
       {availableTabs.map((tab) => (
         <div
           key={tab.id}
+          draggable
+          onDragStart={(e) => handleDragStart(e, tab.id)}
+          onDragEnd={handleDragEnd}
+          onDragOver={(e) => handleDragOver(e, tab.id)}
+          onDragLeave={handleDragLeave}
+          onDrop={(e) => handleDrop(e, tab.id)}
           className={`
             flex items-center gap-2 px-4 py-2 cursor-pointer
             transition-all duration-150 min-w-[150px] max-w-[250px]
             border-t border-l border-r rounded-t-md
             ${
               activeTabId === tab.id
-                ? "bg-gray-50 text-black border-gray-300 -mb-[1px]"
+                ? "bg-gray-50 text-black border-gray-300 -mb-px"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-50 border-gray-300"
             }
+            ${dragOverTabId === tab.id ? "border-blue-500 border-2" : ""}
+            ${draggedTabId === tab.id ? "opacity-50" : ""}
           `}
           onClick={() => setActiveTabId?.(tab.id)}
           onMouseDown={(e) => {
             // Middle click to close tab
-            if (e.button === 1 && tab.id !== "0" && !tab.canNotClose) {
+            if (e.button === 1 && !tab.canNotClose) {
               e.preventDefault();
               closeTab(tab.id);
             }
@@ -64,8 +116,8 @@ export default function TabBar() {
             {tab.name}
           </span>
 
-          {/* Close button (hide for main tab) */}
-          {tab.id !== "0" && !tab.canNotClose && (
+          {/* Close button */}
+          {!tab.canNotClose && (
             <button
               onClick={(e) => {
                 e.stopPropagation();

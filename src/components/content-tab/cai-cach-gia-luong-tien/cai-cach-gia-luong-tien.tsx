@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { TrendingUp, AlertCircle, DollarSign, Zap, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { TrendingUp, AlertCircle, DollarSign, Zap, ChevronDown, ChevronUp, ExternalLink, FileText, Lightbulb, XCircle, CheckCircle2, ArrowRight, MapPin } from "lucide-react";
 import { useTabs } from "@/context/tab-context";
 
 export default function CaiCachGiaLuongTien() {
   const [expandedYear, setExpandedYear] = useState<number | null>(1985);
+  const [activeSection, setActiveSection] = useState<"overview" | "references">("overview");
   const { updateCurrentTabAddress, openTab } = useTabs();
 
   const handleNavigate = (e: React.MouseEvent, url: string, title: string) => {
@@ -44,7 +45,7 @@ export default function CaiCachGiaLuongTien() {
             </span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-3">
-            Cải cách Giá-Lương-Tiền (1985)
+            Cải cách Giá-Lương-Tiền (Tháng 9/1985)
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl">
             "Cú sốc" thất bại đánh dấu sự sụp đổ của cơ chế bao cấp - "Cái giá phải trả" 
@@ -53,8 +54,38 @@ export default function CaiCachGiaLuongTien() {
         </div>
       </div>
 
+      {/* Tab Navigation */}
+      <div className="bg-white border-b sticky top-0 z-10 shadow-sm">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex gap-6">
+            <button
+              onClick={() => setActiveSection("overview")}
+              className={`px-4 py-4 text-sm font-medium border-b-2 transition ${
+                activeSection === "overview"
+                  ? "border-red-600 text-red-600"
+                  : "border-transparent text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              Phân tích
+            </button>
+            <button
+              onClick={() => setActiveSection("references")}
+              className={`px-4 py-4 text-sm font-medium border-b-2 transition ${
+                activeSection === "references"
+                  ? "border-red-600 text-red-600"
+                  : "border-transparent text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              Tài liệu Tham khảo
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-6 py-12 space-y-8">
+        {activeSection === "overview" && (
+          <>
         {/* The Shock - What happened */}
         <div className="bg-white rounded-lg shadow-md p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
@@ -77,9 +108,10 @@ export default function CaiCachGiaLuongTien() {
                 Tăng Giá
               </h3>
               <p className="text-gray-700 text-sm mb-2">
-                Tăng giá hàng hóa do Nhà nước quản lý (gạo, thịt, đường...) lên <strong>3-11 lần</strong>
+                Tăng giá trung bình <strong>4-6 lần</strong>: gạo ~10 lần, thực phẩm ~3-5 lần
               </p>
-              <p className="text-blue-600 font-semibold text-xl">+300-1100%</p>
+              <p className="text-blue-600 font-semibold text-xl">+400-600%</p>
+              <p className="text-xs text-gray-500 mt-1">Gạo từ 0.6 → 6 đồng/kg</p>
             </div>
 
             <div className="bg-green-50 rounded-lg p-6 border border-green-200">
@@ -88,9 +120,10 @@ export default function CaiCachGiaLuongTien() {
                 Tăng Lương
               </h3>
               <p className="text-gray-700 text-sm mb-2">
-                Tăng lương công chức, công nhân viên chức lên <strong>~2-3 lần</strong>
+                Lương danh nghĩa tăng <strong>~2-3 lần</strong>, nhưng giá trị thực giảm <strong className="text-red-600">60-70%</strong>
               </p>
               <p className="text-green-600 font-semibold text-xl">+200-300%</p>
+              <p className="text-xs text-red-600 mt-1 font-semibold">Giá trị thực: -60-70%</p>
             </div>
 
             <div className="bg-purple-50 rounded-lg p-6 border border-purple-200">
@@ -99,9 +132,9 @@ export default function CaiCachGiaLuongTien() {
                 Phát hành Tiền
               </h3>
               <p className="text-gray-700 text-sm mb-2">
-                In thêm tiền để trả lương, bù đắp thâm hụt ngân sách
+                In tiền tăng <strong>~500-600%</strong> (M1) trong 12 tháng để trả lương, bù đắp thâm hụt
               </p>
-              <p className="text-purple-600 font-semibold text-xl">Tăng vọt</p>
+              <p className="text-purple-600 font-semibold text-xl">+587%</p>
             </div>
           </div>
 
@@ -112,25 +145,25 @@ export default function CaiCachGiaLuongTien() {
             </h3>
             <ul className="space-y-2 text-gray-800">
               <li className="flex gap-2">
-                <span className="text-red-600 font-bold text-xl">✗</span>
+                <XCircle className="w-6 h-6 text-red-600 shrink-0" />
                 <span>
                   <strong>Lương tăng chậm hơn giá:</strong> Đời sống người lao động giảm mạnh
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-red-600 font-bold text-xl">✗</span>
+                <XCircle className="w-6 h-6 text-red-600 shrink-0" />
                 <span>
-                  <strong>Lạm phát vượt tầm kiểm soát:</strong> Từ ~90% năm 1985 → <strong className="text-red-600">774.7%</strong> năm 1986
+                  <strong>Lạm phát vượt tầm kiểm soát:</strong> Đạt <strong className="text-red-600">774.7%</strong> trong 12 tháng sau cải cách (9/1985 - 9/1986)
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-red-600 font-bold text-xl">✗</span>
+                <XCircle className="w-6 h-6 text-red-600 shrink-0" />
                 <span>
                   <strong>Khan hiếm trầm trọng hơn:</strong> Hàng hóa biến mất khỏi thị trường, chợ đen phát triển
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-red-600 font-bold text-xl">✗</span>
+                <XCircle className="w-6 h-6 text-red-600 shrink-0" />
                 <span>
                   <strong>Mất niềm tin:</strong> Người dân hoang mang, mất lòng tin vào Nhà nước
                 </span>
@@ -142,7 +175,7 @@ export default function CaiCachGiaLuongTien() {
         {/* Inflation Chart */}
         <div className="bg-white rounded-lg shadow-md p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Lạm phát 774.7% - Con số Kinh hoàng
+            Lạm phát 774.7% - Con số Kinh hoàng (9/1985 - 9/1986)
           </h2>
           
           <div className="mb-8">
@@ -187,13 +220,13 @@ export default function CaiCachGiaLuongTien() {
             <div className="bg-orange-50 rounded-lg p-6 border border-orange-200">
               <h3 className="font-semibold text-orange-900 mb-3">Lạm phát 774% có nghĩa là gì?</h3>
               <div className="space-y-2 text-gray-700 text-sm">
-                <p>Nếu bạn có <strong>100 đồng</strong> đầu năm 1986:</p>
+                <p>Nếu bạn có <strong>100 đồng</strong> tháng 9/1985:</p>
                 <p className="text-red-600 font-semibold">
-                  → Cuối năm chỉ còn <strong>giá trị ~11.5 đồng</strong>
+                  → Tháng 9/1986 chỉ còn <strong>giá trị ~11.5 đồng</strong>
                 </p>
-                <p className="mt-4">Nếu tô phở giá <strong>10 đồng</strong> đầu năm:</p>
+                <p className="mt-4">Nếu tô phở giá <strong>10 đồng</strong> tháng 9/1985:</p>
                 <p className="text-red-600 font-semibold">
-                  → Cuối năm giá <strong>~87 đồng</strong>
+                  → Tháng 9/1986 giá <strong>~87 đồng</strong>
                 </p>
               </div>
             </div>
@@ -350,8 +383,9 @@ export default function CaiCachGiaLuongTien() {
             </div>
 
             <div className="bg-red-600 text-white rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3">
-                💡 Bài học Lịch sử
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                <Lightbulb className="w-6 h-6" />
+                Bài học Lịch sử
               </h3>
               <p className="leading-relaxed">
                 Cải cách giá-lương-tiền 1985 không chỉ là một chính sách thất bại, mà chính là 
@@ -381,19 +415,19 @@ export default function CaiCachGiaLuongTien() {
             </p>
             <ul className="space-y-2 ml-6">
               <li className="flex gap-2">
-                <span className="text-green-600 font-bold">✓</span>
+                <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                 <span>Chuyển từ cơ chế kế hoạch hóa tập trung sang <strong>kinh tế thị trường định hướng XHCN</strong></span>
               </li>
               <li className="flex gap-2">
-                <span className="text-green-600 font-bold">✓</span>
+                <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                 <span>Thừa nhận vai trò của <strong>quy luật giá trị, cung-cầu</strong></span>
               </li>
               <li className="flex gap-2">
-                <span className="text-green-600 font-bold">✓</span>
+                <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                 <span>Khuyến khích <strong>kinh tế tư nhân, kinh tế hộ gia đình</strong></span>
               </li>
               <li className="flex gap-2">
-                <span className="text-green-600 font-bold">✓</span>
+                <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                 <span>Mở cửa, hội nhập kinh tế quốc tế</span>
               </li>
             </ul>
@@ -402,6 +436,289 @@ export default function CaiCachGiaLuongTien() {
             </p>
           </div>
         </div>
+          </>
+        )}
+
+        {activeSection === "references" && (
+          <div className="space-y-8">
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <FileText className="w-7 h-7 text-red-600" />
+                Tài liệu Tham khảo Chính thức
+              </h2>
+              
+              <div className="space-y-6">
+                {/* Official Documents */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    1. Văn kiện Đảng và Nhà nước
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Nghị quyết 09-NQ/TW (9/9/1985)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Quyết định chính thức về cải cách giá-lương-tiền
+                      </p>
+                      <a 
+                        href="https://tulieuvankien.dangcongsan.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Quyết định 217-HĐBT (20/9/1985)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Chi tiết về mức tăng giá: Gạo từ 0.6 → 6 đồng/kg (~10x)
+                      </p>
+                      <a 
+                        href="https://tulieuvankien.dangcongsan.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Nghị định 135-CP (1985)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Về lương: Lương tối thiểu từ 120 → 350 đồng/tháng (~2.9x)
+                      </p>
+                      <a 
+                        href="https://tulieuvankien.dangcongsan.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Văn kiện Đại hội VI (12/1986)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        "Chúng ta chưa hiểu đúng quy luật giá trị" - Thừa nhận thất bại
+                      </p>
+                      <a 
+                        href="https://tulieuvankien.dangcongsan.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Financial Data */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    2. Dữ liệu Tài chính
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Báo cáo Ngân hàng Nhà nước (1986)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        Lạm phát 774.7% (9/1985 - 9/1986)
+                      </p>
+                      <p className="text-sm text-gray-700 mb-1">
+                        M1 (tiền cung ứng) tăng 587% trong cùng kỳ
+                      </p>
+                      <p className="text-sm text-gray-600 mt-2 flex items-center gap-1">
+                        <MapPin className="w-3 h-3" />
+                        Lưu trữ: Thư viện Quốc hội
+                      </p>
+                    </div>
+
+                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        World Bank - Vietnam Economic Report (1987)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Phân tích tác động của cải cách giá-lương-tiền 1985
+                      </p>
+                      <a 
+                        href="https://www.worldbank.org" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-600 hover:text-purple-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        worldbank.org
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Academic Sources */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    3. Nghiên cứu và Sách chuyên khảo
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Lịch sử Kinh tế Việt Nam 1945-2000 (tập 2)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        NXB Chính trị Quốc gia, 2004
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Chi tiết về cải cách giá-lương-tiền và hậu quả
+                      </p>
+                    </div>
+
+                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Hồi ký Nguyễn Văn Linh
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        NXB Chính trị Quốc gia, 2000
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Ghi chép về "Phiên họp Mất ngủ" tháng 10/1985
+                      </p>
+                    </div>
+
+                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Đổi Mới - Nhìn lại 30 năm
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        NXB Chính trị Quốc gia, 2016
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Phân tích quá trình dẫn đến Đổi Mới
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Internal Reports */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    4. Báo cáo Nội bộ
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Báo cáo Bộ Lao động (1986)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        Về tình trạng đời sống người lao động sau cải cách
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        "Lương tăng nhưng không mua được gì"
+                      </p>
+                    </div>
+
+                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Tài liệu Bộ Chính trị (10/1985)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        Biên bản phiên họp bàn về hậu quả cải cách
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        "Cải cách đột ngột, không chuẩn bị"
+                      </p>
+                    </div>
+
+                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Báo cáo Bộ Kế hoạch (1986)
+                      </h4>
+                      <p className="text-sm text-gray-700">
+                        "Nguồn cung không tăng" - Phân tích về thất bại
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Oral History */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    5. Lịch sử Trực tiếp
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-indigo-500 pl-4 py-3 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Nghiên cứu Di cư 1985-1986
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        Viện Xã hội học Việt Nam
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Về hiện tượng "bỏ thành phố về quê" sau cải cách
+                      </p>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-3 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Tài liệu Nội bộ (1986)
+                      </h4>
+                      <p className="text-sm text-gray-700">
+                        Ghi chép giá thực tế tại Hà Nội: Tô phở 10 → 87 đồng
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Search Tips */}
+                <div className="bg-red-50 rounded-lg p-6 border border-red-200">
+                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <Lightbulb className="w-5 h-5 text-red-600" />
+                    Cách Tìm kiếm Tài liệu
+                  </h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li className="flex gap-2">
+                      <ArrowRight className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
+                      <span>
+                        <strong>Tư liệu Văn kiện Đảng:</strong>{" "}
+                        <a href="https://tulieuvankien.dangcongsan.vn" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                          tulieuvankien.dangcongsan.vn
+                        </a>{" "}
+                        → Tìm: "cải cách giá lương tiền 1985"
+                      </span>
+                    </li>
+                    <li className="flex gap-2">
+                      <ArrowRight className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
+                      <span>
+                        <strong>World Bank:</strong> Search "Vietnam 1985 reform" cho báo cáo kinh tế
+                      </span>
+                    </li>
+                    <li className="flex gap-2">
+                      <ArrowRight className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
+                      <span>
+                        <strong>Thư viện Quốc hội:</strong> Tra cứu Báo cáo Ngân hàng Nhà nước 1986
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Related Topics Navigation */}
         <div className="mt-12 pt-8 border-t border-gray-200">
@@ -457,8 +774,9 @@ export default function CaiCachGiaLuongTien() {
               </div>
             </button>
           </div>
-          <p className="text-sm text-gray-500 mt-4 text-center">
-            💡 Tip: Ctrl+Click (Cmd+Click on Mac) hoặc Middle-click để mở trong tab mới
+          <p className="text-sm text-gray-500 mt-4 text-center flex items-center justify-center gap-2">
+            <Lightbulb className="w-4 h-4" />
+            Tip: Ctrl+Click (Cmd+Click on Mac) hoặc Middle-click để mở trong tab mới
           </p>
         </div>
       </div>
