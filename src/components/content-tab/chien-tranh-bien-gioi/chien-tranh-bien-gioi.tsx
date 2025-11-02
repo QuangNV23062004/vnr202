@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { MapPin, Users, TrendingDown, Calendar, Shield, AlertCircle, ExternalLink } from "lucide-react";
+import { MapPin, Users, TrendingDown, Calendar, Shield, AlertCircle, ExternalLink, FileText, Circle, ArrowRight, Lightbulb } from "lucide-react";
 import { useTabs } from "@/context/tab-context";
 
 export default function ChienTranhBienGioi() {
-  const [activeTab, setActiveTab] = useState<"overview" | "economic" | "timeline">("overview");
+  const [activeTab, setActiveTab] = useState<"overview" | "economic" | "timeline" | "references">("overview");
   const { updateCurrentTabAddress, openTab } = useTabs();
 
   const handleNavigate = (e: React.MouseEvent, url: string, title: string) => {
@@ -77,6 +77,16 @@ export default function ChienTranhBienGioi() {
             >
               Dòng thời gian
             </button>
+            <button
+              onClick={() => setActiveTab("references")}
+              className={`px-4 py-4 text-sm font-medium border-b-2 transition ${
+                activeTab === "references"
+                  ? "border-red-600 text-red-600"
+                  : "border-transparent text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              Tài liệu Tham khảo
+            </button>
           </div>
         </div>
       </div>
@@ -94,13 +104,13 @@ export default function ChienTranhBienGioi() {
               </div>
               <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-orange-600">
                 <Users className="w-8 h-8 text-orange-600 mb-3" />
-                <h3 className="text-3xl font-bold text-gray-900 mb-1">600,000+</h3>
-                <p className="text-gray-600 text-sm">Quân số điều động</p>
+                <h3 className="text-3xl font-bold text-gray-900 mb-1">~500,000</h3>
+                <p className="text-gray-600 text-sm">Quân số điều động (peak 1980s)</p>
               </div>
               <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-amber-600">
                 <TrendingDown className="w-8 h-8 text-amber-600 mb-3" />
-                <h3 className="text-3xl font-bold text-gray-900 mb-1">~5% GDP</h3>
-                <p className="text-gray-600 text-sm">Chi tiêu quốc phòng hàng năm</p>
+                <h3 className="text-3xl font-bold text-gray-900 mb-1">15-25%</h3>
+                <p className="text-gray-600 text-sm">Ngân sách (~20% GDP)</p>
               </div>
             </div>
 
@@ -129,19 +139,19 @@ export default function ChienTranhBienGioi() {
                   </h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <span>Xung đột với Khmer Đỏ tại Campuchia</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <span>Chiến dịch giải phóng Campuchia (1978-1979)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
-                      <span>Duy trì 150,000-200,000 quân tại Campuchia</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
+                      <span>Duy trì 150,000-200,000 quân tại Campuchia (luân phiên, peak ~200,000)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <span>Cấm vận quốc tế từ phương Tây</span>
                     </li>
                   </ul>
@@ -155,19 +165,19 @@ export default function ChienTranhBienGioi() {
                   </h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-orange-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-orange-600 fill-orange-600 mt-0.5 shrink-0" />
                       <span>Chiến tranh biên giới Việt-Trung (1979)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-orange-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-orange-600 fill-orange-600 mt-0.5 shrink-0" />
                       <span>Xung đột liên tục trên biên giới (1979-1989)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-orange-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-orange-600 fill-orange-600 mt-0.5 shrink-0" />
                       <span>Duy trì lực lượng phòng thủ lớn</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-orange-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-orange-600 fill-orange-600 mt-0.5 shrink-0" />
                       <span>Căng thẳng ngoại giao với Trung Quốc</span>
                     </li>
                   </ul>
@@ -184,19 +194,19 @@ export default function ChienTranhBienGioi() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Gánh nặng Trực tiếp</h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• Chi tiêu quân sự chiếm ~5% GDP</li>
-                    <li>• Huy động hàng trăm ngàn thanh niên vào quân đội</li>
-                    <li>• Giảm lực lượng lao động sản xuất</li>
-                    <li>• Chi phí vũ khí, trang bị, hậu cần</li>
+                    <li>• Chi tiêu quốc phòng chiếm ~15-25% ngân sách nhà nước (~20% GDP)</li>
+                    <li>• Huy động ~500,000 thanh niên vào quân đội (bao gồm luân phiên)</li>
+                    <li>• Giảm ~10-15% lực lượng lao động sản xuất</li>
+                    <li>• Chi phí vũ khí, trang bị, hậu cần khổng lồ</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Gánh nặng Gián tiếp</h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• Cấm vận kinh tế quốc tế</li>
+                    <li>• Cấm vận kinh tế quốc tế từ phương Tây và ASEAN</li>
                     <li>• Cô lập ngoại giao với phương Tây</li>
-                    <li>• Mất đi viện trợ quốc tế</li>
-                    <li>• Phụ thuộc vào viện trợ từ Liên Xô</li>
+                    <li>• Mất đi viện trợ quốc tế (Nhật Bản, Thụy Điển đình chỉ 1979)</li>
+                    <li>• Phụ thuộc ~80-90% vào viện trợ từ Liên Xô</li>
                   </ul>
                 </div>
               </div>
@@ -221,11 +231,12 @@ export default function ChienTranhBienGioi() {
                   <div>
                     <div className="flex justify-between mb-2">
                       <span className="text-gray-700 font-medium">Quốc phòng & An ninh</span>
-                      <span className="text-red-600 font-bold">~40-45%</span>
+                      <span className="text-red-600 font-bold">~15-25%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-6">
-                      <div className="bg-red-600 h-6 rounded-full" style={{ width: "45%" }}></div>
+                      <div className="bg-red-600 h-6 rounded-full" style={{ width: "25%" }}></div>
                     </div>
+                    <p className="text-xs text-gray-500 mt-1">Tương đương ~20% GDP (theo SIPRI)</p>
                   </div>
                   
                   <div>
@@ -267,28 +278,28 @@ export default function ChienTranhBienGioi() {
                 </h3>
                 <div className="space-y-3 text-gray-700">
                   <p className="flex gap-3">
-                    <span className="text-red-600 font-bold text-xl">→</span>
+                    <ArrowRight className="w-6 h-6 text-red-600 shrink-0" />
                     <span>
                       <strong>Thiếu vốn đầu tư:</strong> Ngân sách dành cho quốc phòng → không còn vốn 
                       cho phát triển kinh tế → sản xuất trì trệ
                     </span>
                   </p>
                   <p className="flex gap-3">
-                    <span className="text-red-600 font-bold text-xl">→</span>
+                    <ArrowRight className="w-6 h-6 text-red-600 shrink-0" />
                     <span>
                       <strong>Thiếu lao động:</strong> Hàng trăm ngàn thanh niên nhập ngũ → thiếu 
                       lực lượng lao động sản xuất → năng suất giảm
                     </span>
                   </p>
                   <p className="flex gap-3">
-                    <span className="text-red-600 font-bold text-xl">→</span>
+                    <ArrowRight className="w-6 h-6 text-red-600 shrink-0" />
                     <span>
                       <strong>Cô lập quốc tế:</strong> Cấm vận từ phương Tây → không có viện trợ, 
                       đầu tư nước ngoài → phụ thuộc vào Liên Xô
                     </span>
                   </p>
                   <p className="flex gap-3">
-                    <span className="text-red-600 font-bold text-xl">→</span>
+                    <ArrowRight className="w-6 h-6 text-red-600 shrink-0" />
                     <span>
                       <strong>Khủng hoảng kép:</strong> Áp lực từ chiến tranh + khủng hoảng nội tại 
                       của cơ chế bao cấp → đẩy đất nước vào khủng hoảng toàn diện
@@ -315,10 +326,10 @@ export default function ChienTranhBienGioi() {
                   </thead>
                   <tbody>
                     <tr className="border-b border-gray-200">
-                      <td className="py-3 px-4 text-gray-700">Chi quốc phòng / GDP</td>
-                      <td className="py-3 px-4 text-center text-gray-700">~3%</td>
-                      <td className="py-3 px-4 text-center text-gray-700">~5-7%</td>
-                      <td className="py-3 px-4 text-center text-red-600 font-semibold">+67%</td>
+                      <td className="py-3 px-4 text-gray-700">Chi quốc phòng / Ngân sách</td>
+                      <td className="py-3 px-4 text-center text-gray-700">~10%</td>
+                      <td className="py-3 px-4 text-center text-gray-700">~15-25%</td>
+                      <td className="py-3 px-4 text-center text-red-600 font-semibold">+50-150%</td>
                     </tr>
                     <tr className="border-b border-gray-200">
                       <td className="py-3 px-4 text-gray-700">Quân số thường trực</td>
@@ -329,14 +340,14 @@ export default function ChienTranhBienGioi() {
                     <tr className="border-b border-gray-200">
                       <td className="py-3 px-4 text-gray-700">Viện trợ nước ngoài</td>
                       <td className="py-3 px-4 text-center text-gray-700">Đa dạng</td>
-                      <td className="py-3 px-4 text-center text-gray-700">Chỉ Liên Xô</td>
+                      <td className="py-3 px-4 text-center text-gray-700">~80-90% từ Liên Xô</td>
                       <td className="py-3 px-4 text-center text-red-600 font-semibold">Giảm mạnh</td>
                     </tr>
                     <tr className="border-b border-gray-200">
                       <td className="py-3 px-4 text-gray-700">Tăng trưởng GDP</td>
-                      <td className="py-3 px-4 text-center text-gray-700">~5%</td>
-                      <td className="py-3 px-4 text-center text-gray-700">~2%</td>
-                      <td className="py-3 px-4 text-center text-red-600 font-semibold">-60%</td>
+                      <td className="py-3 px-4 text-center text-gray-700">~4-6%</td>
+                      <td className="py-3 px-4 text-center text-gray-700">1-3% trung bình</td>
+                      <td className="py-3 px-4 text-center text-red-600 font-semibold">Giảm ~50-60%</td>
                     </tr>
                   </tbody>
                 </table>
@@ -365,8 +376,9 @@ export default function ChienTranhBienGioi() {
                       Chiến dịch Giải phóng Campuchia
                     </h3>
                     <p className="text-gray-700">
-                      Quân đội Việt Nam tiến vào Campuchia, lật đổ chế độ Khmer Đỏ. Bắt đầu giai đoạn 
-                      đóng quân 200,000 binh sĩ tại Campuchia kéo dài 10 năm.
+                      Quân đội Việt Nam tiến vào Campuchia (25/12/1978), lật đổ chế độ Khmer Đỏ 
+                      (Phnom Penh 7/1/1979). Bắt đầu giai đoạn đóng quân 150,000-200,000 binh sĩ 
+                      tại Campuchia (peak ~200,000) kéo dài 10 năm.
                     </p>
                   </div>
                 </div>
@@ -382,8 +394,9 @@ export default function ChienTranhBienGioi() {
                       Chiến tranh Biên giới Việt-Trung
                     </h3>
                     <p className="text-gray-700">
-                      Trung Quốc mở cuộc tấn công quy mô lớn vào biên giới phía Bắc Việt Nam. 
-                      Xung đột kéo dài gần 1 tháng, gây thiệt hại nặng nề cho cả hai bên.
+                      Trung Quốc mở cuộc tấn công quy mô lớn vào biên giới phía Bắc Việt Nam 
+                      (17/2-16/3/1979). Khoảng 200,000 quân Trung Quốc đối đầu với 70,000-100,000 
+                      quân chính quy Việt Nam + ~150,000 dân quân. Xung đột gây thiệt hại nặng nề cho cả hai bên.
                     </p>
                   </div>
                 </div>
@@ -399,8 +412,9 @@ export default function ChienTranhBienGioi() {
                       Xung đột Biên giới liên tục
                     </h3>
                     <p className="text-gray-700">
-                      Các cuộc đụng độ và pháo kích liên tục diễn ra trên biên giới Việt-Trung. 
-                      Việt Nam phải duy trì lực lượng lớn tại cả hai mặt trận.
+                      Các cuộc đụng độ và pháo kích liên tục diễn ra trên biên giới Việt-Trung 
+                      (~3,750 sự kiện 1979-1982). Đặc biệt trận Vị Xuyên (1984-1988) với ~4,000 
+                      binh sĩ Việt Nam tử vong. Việt Nam phải duy trì lực lượng lớn tại cả hai mặt trận.
                     </p>
                   </div>
                 </div>
@@ -416,8 +430,9 @@ export default function ChienTranhBienGioi() {
                       Cấm vận Quốc tế
                     </h3>
                     <p className="text-gray-700">
-                      Phương Tây áp đặt cấm vận kinh tế toàn diện. Việt Nam bị cô lập ngoại giao, 
-                      phụ thuộc hoàn toàn vào viện trợ từ Liên Xô và các nước XHCN.
+                      Phương Tây và ASEAN áp đặt cấm vận kinh tế toàn diện (UNGA Resolution S/13027, 1979). 
+                      Nhật Bản và Thụy Điển đình chỉ viện trợ 1979. Việt Nam bị cô lập ngoại giao, 
+                      phụ thuộc ~80-90% vào viện trợ từ Liên Xô (~$3 tỷ/năm cho quân sự và kinh tế).
                     </p>
                   </div>
                 </div>
@@ -433,8 +448,9 @@ export default function ChienTranhBienGioi() {
                       Rút quân khỏi Campuchia
                     </h3>
                     <p className="text-gray-700">
-                      Việt Nam hoàn tất việc rút quân khỏi Campuchia, kết thúc 10 năm đóng quân. 
-                      Bước đầu cải thiện quan hệ quốc tế sau Đổi Mới.
+                      Việt Nam hoàn tất việc rút quân khỏi Campuchia (21-26/9/1989, đợt cuối ~26,000 binh sĩ), 
+                      kết thúc 10 năm đóng quân. Bước đầu cải thiện quan hệ quốc tế sau Đổi Mới, 
+                      mở đường cho bình thường hóa với Trung Quốc và phương Tây.
                     </p>
                   </div>
                 </div>
@@ -454,6 +470,206 @@ export default function ChienTranhBienGioi() {
                 kinh tế, đẩy nhanh quá trình sụp đổ của mô hình kế hoạch hóa tập trung và buộc Đảng phải 
                 suy nghĩ lại về con đường phát triển.
               </p>
+            </div>
+          </div>
+        )}
+
+        {activeTab === "references" && (
+          <div className="space-y-8">
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <FileText className="w-7 h-7 text-red-600" />
+                Tài liệu Tham khảo Chính thức
+              </h2>
+              
+              <div className="space-y-6">
+                {/* Official Documents */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    1. Văn kiện Đảng và Nhà nước
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Văn kiện Đại hội VI (12/1986)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        "Chiến tranh biên giới... làm trầm trọng thêm khủng hoảng kinh tế"
+                      </p>
+                      <a 
+                        href="https://tulieuvankien.dangcongsan.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Military History */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    2. Lịch sử Quân sự
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Lịch sử Quân đội Nhân dân Việt Nam (1945-2000), tập 4
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        NXB Quân đội Nhân dân, 2005
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Chi tiết về quân số, chiến dịch, và tổn thất
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* International Sources */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    3. Nguồn Quốc tế
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        SIPRI Military Expenditure Database
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Chi tiêu quốc phòng ~20% GDP (1979-1985)
+                      </p>
+                      <a 
+                        href="https://sipri.org/databases/milex" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-600 hover:text-purple-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        sipri.org/databases/milex
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        UN General Assembly Resolutions (1979-1991)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Resolution S/13027 (1979) về cấm vận và rút quân
+                      </p>
+                      <a 
+                        href="https://www.un.org/documents" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-600 hover:text-purple-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        un.org/documents
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        World Bank Vietnam Economic Reports (1980s)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        GDP growth: 4-6% pre-war → 1-3% post-war
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Báo cáo kinh tế về tác động của chiến tranh
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Statistics */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    4. Dữ liệu Thống kê
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Niên giám Thống kê 1976-1985
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        Tổng cục Thống kê Việt Nam
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Phân bổ ngân sách, GDP, viện trợ
+                      </p>
+                      <p className="text-sm text-gray-600 mt-2 flex items-center gap-1">
+                        <MapPin className="w-3 h-3" />
+                        Lưu trữ: Thư viện Quốc hội / Tổng cục Thống kê
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Academic Sources */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    5. Nghiên cứu Học thuật
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-indigo-500 pl-4 py-3 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Cambodian–Vietnamese War
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Wikipedia với nguồn đã được trích dẫn
+                      </p>
+                      <p className="text-sm text-gray-600 italic mb-2">
+                        Quân số: 150k-200k; Thương vong: ~15,000 tử vong
+                      </p>
+                      <a 
+                        href="https://en.wikipedia.org/wiki/Cambodian%E2%80%93Vietnamese_War" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Wikipedia - Cambodian-Vietnamese War
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Search Tips */}
+                <div className="bg-red-50 rounded-lg p-6 border border-red-200">
+                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <Lightbulb className="w-5 h-5 text-red-600" />
+                    Cách Tìm kiếm Tài liệu
+                  </h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li className="flex gap-2">
+                      <ArrowRight className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
+                      <span>
+                        <strong>Tư liệu Văn kiện Đảng:</strong>{" "}
+                        <a href="https://tulieuvankien.dangcongsan.vn" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                          tulieuvankien.dangcongsan.vn
+                        </a>{" "}
+                        → Tìm: "chiến tranh biên giới 1979"
+                      </span>
+                    </li>
+                    <li className="flex gap-2">
+                      <ArrowRight className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
+                      <span>
+                        <strong>SIPRI Database:</strong> Tra cứu chi tiêu quốc phòng Việt Nam 1979-1985
+                      </span>
+                    </li>
+                    <li className="flex gap-2">
+                      <ArrowRight className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
+                      <span>
+                        <strong>UN Documents:</strong> Tìm Resolution S/13027 về cấm vận và rút quân Campuchia
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         )}
@@ -502,18 +718,19 @@ export default function ChienTranhBienGioi() {
                     CQ8.1 - Đỉnh cao Khủng hoảng
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-600 transition">
-                    Cải cách Giá-Lương-Tiền (1985)
+                    Cải cách Giá-Lương-Tiền (9/1985)
                   </h3>
                   <p className="text-sm text-gray-600">
-                    "Cú sốc" thất bại và lạm phát 774% - con đường đến Đổi Mới
+                    "Cú sốc" thất bại và lạm phát 774.7% - con đường đến Đổi Mới
                   </p>
                 </div>
                 <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-red-600 transition ml-4 shrink-0" />
               </div>
             </button>
           </div>
-          <p className="text-sm text-gray-500 mt-4 text-center">
-            💡 Tip: Ctrl+Click (Cmd+Click on Mac) hoặc Middle-click để mở trong tab mới
+          <p className="text-sm text-gray-500 mt-4 text-center flex items-center justify-center gap-2">
+            <Lightbulb className="w-4 h-4" />
+            Tip: Ctrl+Click (Cmd+Click on Mac) hoặc Middle-click để mở trong tab mới
           </p>
         </div>
       </div>

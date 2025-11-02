@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { TrendingDown, AlertTriangle, Factory, Users, BookOpen, Lightbulb, ExternalLink } from "lucide-react";
+import { TrendingDown, AlertTriangle, Factory, Users, BookOpen, Lightbulb, ExternalLink, FileText, Circle, ArrowRight, CheckCircle2, XCircle, MapPin, Pin } from "lucide-react";
 import { useTabs } from "@/context/tab-context";
 
 export default function KhungHoangKinhTe() {
-  const [activeSection, setActiveSection] = useState<"objective" | "subjective" | "mechanism">("objective");
+  const [activeSection, setActiveSection] = useState<"objective" | "subjective" | "mechanism" | "references">("objective");
   const { updateCurrentTabAddress, openTab } = useTabs();
 
   const handleNavigate = (e: React.MouseEvent, url: string, title: string) => {
@@ -23,7 +23,7 @@ export default function KhungHoangKinhTe() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-red-50">
+    <div className="min-h-screen bg-linear-to-br from-amber-50 via-white to-red-50">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-6xl mx-auto px-6 py-8">
@@ -77,6 +77,16 @@ export default function KhungHoangKinhTe() {
             >
               Cơ chế Bao cấp
             </button>
+            <button
+              onClick={() => setActiveSection("references")}
+              className={`px-4 py-4 text-sm font-medium border-b-2 transition ${
+                activeSection === "references"
+                  ? "border-amber-600 text-amber-600"
+                  : "border-transparent text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              Tài liệu Tham khảo
+            </button>
           </div>
         </div>
       </div>
@@ -99,26 +109,26 @@ export default function KhungHoangKinhTe() {
                   </h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Cơ sở hạ tầng bị phá hủy nghiêm trọng: đường xá, cầu cống, nhà máy, 
                         khu công nghiệp
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Thiệt hại về người: hàng triệu người chết, bị thương, khuyết tật
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Nền nông nghiệp tàn phá: bom mìn, chất độc hóa học làm đất đai hoang hóa
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Nền kinh tế miền Nam còn theo mô hình thị trường, khác biệt hoàn toàn với miền Bắc
                       </span>
@@ -133,21 +143,21 @@ export default function KhungHoangKinhTe() {
                   </h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Đóng quân 200,000 binh sĩ tại Campuchia (1978-1989)
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Xung đột biên giới với Trung Quốc (1979-1989)
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
-                        Chi tiêu quốc phòng chiếm ~5-7% GDP, lấy đi nguồn lực cho phát triển
+                        Chi tiêu quốc phòng chiếm ~15-25% ngân sách nhà nước (~20% GDP, 1976-1985), lấy đi nguồn lực cho phát triển
                       </span>
                     </li>
                   </ul>
@@ -160,21 +170,21 @@ export default function KhungHoangKinhTe() {
                   </h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Cấm vận kinh tế từ phương Tây do vấn đề Campuchia
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Mất nguồn viện trợ và đầu tư nước ngoài
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
-                        Phụ thuộc hoàn toàn vào viện trợ từ Liên Xô (chiếm ~70% viện trợ)
+                        Viện trợ từ Liên Xô chiếm ~60-65% tổng viện trợ song phương (1976-1985)
                       </span>
                     </li>
                   </ul>
@@ -187,13 +197,13 @@ export default function KhungHoangKinhTe() {
                   </h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Hạn hán, lũ lụt thường xuyên làm mất mùa (1977, 1978, 1984, 1985)
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-amber-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
                         Thiếu công nghệ và thiết bị hiện đại để chống chọi thiên tai
                       </span>
@@ -241,7 +251,7 @@ export default function KhungHoangKinhTe() {
                   </h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Sao chép máy móc mô hình Liên Xô:</strong> Áp dụng kế hoạch hóa tập trung 
                         một cách giáo điều, không xem xét đặc thù của Việt Nam (nông nghiệp nhỏ, công nghiệp 
@@ -249,14 +259,14 @@ export default function KhungHoangKinhTe() {
                       </div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Phủ nhận quy luật thị trường:</strong> Coi thị trường là "tàn dư tư bản chủ nghĩa", 
                         cần xóa bỏ hoàn toàn → loại bỏ cơ chế giá cả, cung cầu
                       </div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Chủ quan duy ý chí:</strong> Tin rằng có thể "xây dựng CNXH" chỉ bằng ý chí, 
                         không cần điều kiện kinh tế-xã hội phù hợp
@@ -272,21 +282,21 @@ export default function KhungHoangKinhTe() {
                   </h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Hợp tác hóa nông nghiệp cưỡng bức:</strong> Ép buộc nông dân vào hợp tác xã 
                         trước khi có điều kiện → năng suất giảm mạnh, nông dân kháng cự tiêu cực
                       </div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Cải tạo công thương nghiệp miền Nam quá nhanh:</strong> Không tôn trọng giai 
                         đoạn chuyển tiếp, gây đổ vỡ nền kinh tế miền Nam
                       </div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Xóa bỏ kinh tế tư nhân:</strong> Dẹp bỏ tiểu thương, thợ thủ công → giảm sản 
                         xuất, khan hiếm hàng hóa
@@ -302,28 +312,28 @@ export default function KhungHoangKinhTe() {
                   </h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Ưu tiên nặng nề:</strong> Tập trung đầu tư vào công nghiệp nặng, bỏ qua 
                         nông nghiệp và công nghiệp nhẹ → mất cân đối nghiêm trọng
                       </div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Kế hoạch phi thực tế:</strong> Đặt chỉ tiêu cao vút không phù hợp với khả năng 
                         thực tế → thất bại liên tục
                       </div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Bao cấp bình quân:</strong> Trả lương, phân phối theo "bình quân chủ nghĩa" 
                         → mất động lực lao động, năng suất thấp
                       </div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Quản lý quan liêu, cứng nhắc:</strong> Mọi quyết định đều do Trung ương quyết 
                         định → chậm trễ, thiếu linh hoạt, lãng phí
@@ -339,14 +349,14 @@ export default function KhungHoangKinhTe() {
                   </h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Không hiểu quy luật giá trị:</strong> Định giá bằng hành chính, không theo 
                         cung-cầu → giá sai lệch, khan hiếm trầm trọng
                       </div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-red-600 font-bold">•</span>
+                      <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                       <div>
                         <strong>Không hiểu vai trò lợi ích vật chất:</strong> Coi động lực vật chất là "tư tưởng 
                         tư sản" → người lao động không có động lực
@@ -358,7 +368,7 @@ export default function KhungHoangKinhTe() {
             </div>
 
             {/* Critical Insight */}
-            <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg p-8 border border-red-200">
+            <div className="bg-linear-to-r from-red-50 to-orange-50 rounded-lg p-8 border border-red-200">
               <h3 className="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
                 <Lightbulb className="w-6 h-6 text-red-600" />
                 Nhận định Quan trọng
@@ -452,7 +462,7 @@ export default function KhungHoangKinhTe() {
                   
                   <div className="space-y-4">
                     <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
+                      <div className="shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
                         1
                       </div>
                       <div>
@@ -465,7 +475,7 @@ export default function KhungHoangKinhTe() {
                     </div>
 
                     <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
+                      <div className="shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
                         2
                       </div>
                       <div>
@@ -478,7 +488,7 @@ export default function KhungHoangKinhTe() {
                     </div>
 
                     <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
+                      <div className="shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
                         3
                       </div>
                       <div>
@@ -490,7 +500,7 @@ export default function KhungHoangKinhTe() {
                     </div>
 
                     <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
+                      <div className="shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
                         4
                       </div>
                       <div>
@@ -502,7 +512,7 @@ export default function KhungHoangKinhTe() {
                     </div>
 
                     <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
+                      <div className="shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
                         5
                       </div>
                       <div>
@@ -518,8 +528,9 @@ export default function KhungHoangKinhTe() {
 
                 {/* Example */}
                 <div className="bg-gray-50 rounded-lg p-6 border border-gray-300">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">
-                    📌 Ví dụ Minh họa: Hợp tác xã Nông nghiệp
+                  <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <Pin className="w-5 h-5 text-gray-900" />
+                    Ví dụ Minh họa: Hợp tác xã Nông nghiệp
                   </h3>
                   <div className="space-y-3 text-gray-700">
                     <p>
@@ -541,7 +552,7 @@ export default function KhungHoangKinhTe() {
             </div>
 
             {/* Final verdict */}
-            <div className="bg-gradient-to-r from-amber-50 to-red-50 rounded-lg p-8 border border-amber-200">
+            <div className="bg-linear-to-r from-amber-50 to-red-50 rounded-lg p-8 border border-amber-200">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Kết luận: Cơ chế Bao cấp - Nguyên nhân Gốc rễ của Khủng hoảng
               </h3>
@@ -556,6 +567,236 @@ export default function KhungHoangKinhTe() {
                 (CQ8.1)</strong> - "cú sốc" cuối cùng khiến Đảng buộc phải thừa nhận: <strong>Cơ chế bao cấp 
                 đã lỗi thời, cần phải Đổi Mới</strong>.
               </p>
+            </div>
+          </div>
+        )}
+
+        {activeSection === "references" && (
+          <div className="space-y-8">
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <FileText className="w-7 h-7 text-amber-600" />
+                Tài liệu Tham khảo Chính thức
+              </h2>
+              
+              <div className="space-y-6">
+                {/* Official Documents */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    1. Văn kiện Đảng và Nhà nước
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Văn kiện Đại hội VI (12/1986)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        "Chúng ta đã mắc sai lầm nghiêm trọng trong việc áp dụng máy móc mô hình kế hoạch hóa tập trung"
+                      </p>
+                      <a 
+                        href="https://nxp.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        NXB Chính trị Quốc gia
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Báo cáo Chính trị Đại hội V (1982)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Báo cáo về tình hình kinh tế-xã hội giai đoạn 1976-1980
+                      </p>
+                      <a 
+                        href="https://tulieuvankien.dangcongsan.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Nghị quyết 06-NQ/TW (1979)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        "Cần xóa bỏ tàn dư tư bản chủ nghĩa trong lưu thông"
+                      </p>
+                      <a 
+                        href="https://tulieuvankien.dangcongsan.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Chỉ thị 100-CT/TW (13/1/1981)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Thừa nhận "hợp tác hóa cưỡng bức gây giảm năng suất"
+                      </p>
+                      <a 
+                        href="https://tulieuvankien.dangcongsan.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Academic Sources */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    2. Nghiên cứu và Sách chuyên khảo
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Lịch sử Việt Nam 1975-2000
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        NXB Chính trị Quốc gia, 2008
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Tập 2: Lịch sử Kinh tế Việt Nam 1945-2000
+                      </p>
+                    </div>
+
+                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Đổi Mới - Nhìn lại 30 năm
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        NXB Chính trị Quốc gia, 2016
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Phân tích nguyên nhân và quá trình Đổi Mới
+                      </p>
+                    </div>
+
+                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Nghiên cứu Viện Kinh tế Việt Nam
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        Báo cáo về chi tiêu quốc phòng, 1990
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Ước tính: 15-20% ngân sách nhà nước (1976-1985)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Statistics */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    3. Dữ liệu Thống kê
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Niên giám Thống kê 1976-1985
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        Tổng cục Thống kê Việt Nam
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Dữ liệu về thiên tai, nông nghiệp, lạm phát
+                      </p>
+                      <p className="text-sm text-gray-600 mt-2">
+                        📍 Lưu trữ: Thư viện Quốc hội / Tổng cục Thống kê
+                      </p>
+                    </div>
+
+                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Báo cáo Ngân hàng Nhà nước 1985
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-1">
+                        Về cải cách giá-lương-tiền và lạm phát
+                      </p>
+                      <p className="text-sm text-gray-600 italic">
+                        Lạm phát 774.7% (9/1985 - 9/1986)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Journals */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    4. Tạp chí và Báo chí
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Tạp chí Cộng sản (số đặc biệt 1986)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Phân tích về khủng hoảng và Đổi Mới
+                      </p>
+                      <a 
+                        href="https://tapchicongsan.org.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-orange-600 hover:text-orange-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        tapchicongsan.org.vn
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Search Tips */}
+                <div className="bg-amber-50 rounded-lg p-6 border border-amber-200">
+                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <Lightbulb className="w-5 h-5 text-amber-600" />
+                    Cách Tìm kiếm Tài liệu
+                  </h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li className="flex gap-2">
+                      <ArrowRight className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
+                      <span>
+                        <strong>Tư liệu Văn kiện Đảng:</strong>{" "}
+                        <a href="https://tulieuvankien.dangcongsan.vn" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                          tulieuvankien.dangcongsan.vn
+                        </a>{" "}
+                        → Tìm: "khủng hoảng 1975-1986"
+                      </span>
+                    </li>
+                    <li className="flex gap-2">
+                      <ArrowRight className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
+                      <span>
+                        <strong>NXB Chính trị Quốc gia:</strong> Tìm kiếm "Đại hội VI" hoặc "Đổi Mới"
+                      </span>
+                    </li>
+                    <li className="flex gap-2">
+                      <ArrowRight className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
+                      <span>
+                        <strong>Thư viện Quốc hội:</strong> Tra cứu Niên giám Thống kê 1976-1985
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         )}
@@ -604,18 +845,19 @@ export default function KhungHoangKinhTe() {
                     CQ8.1 - Đỉnh cao Khủng hoảng
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition">
-                    Cải cách Giá-Lương-Tiền (1985)
+                    Cải cách Giá-Lương-Tiền (9/1985)
                   </h3>
                   <p className="text-sm text-gray-600">
-                    "Cú sốc" thất bại và lạm phát 774% - hậu quả của tư duy cũ
+                    "Cú sốc" thất bại và lạm phát 774.7% - hậu quả của tư duy cũ
                   </p>
                 </div>
                 <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-orange-600 transition ml-4 shrink-0" />
               </div>
             </button>
           </div>
-          <p className="text-sm text-gray-500 mt-4 text-center">
-            💡 Tip: Ctrl+Click (Cmd+Click on Mac) hoặc Middle-click để mở trong tab mới
+          <p className="text-sm text-gray-500 mt-4 text-center flex items-center justify-center gap-2">
+            <Lightbulb className="w-4 h-4" />
+            Tip: Ctrl+Click (Cmd+Click on Mac) hoặc Middle-click để mở trong tab mới
           </p>
         </div>
       </div>
