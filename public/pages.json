@@ -251,5 +251,24 @@
       "ho tro sinh vien",
       "nhom 5"
     ]
+  },
+  {
+    "id": "7",
+    "url": "https://www.youtube.com/",
+    "title": "YouTube",
+    "description": "YouTube is a platform for sharing and discovering videos. Explore a wide variety of content, including music videos, educational tutorials, and entertainment.",
+    "domain": "youtube.com",
+    "keywords": [
+      "vnr202",
+      "YouTube",
+      "video sharing",
+      "music videos",
+      "tutorials",
+      "entertainment",
+      "streaming",
+      "videos",
+      "education",
+      "Google"
+    ]
   }
 ]
