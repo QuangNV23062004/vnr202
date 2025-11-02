@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactNode, createContext, useContext, useState } from "react";
-
+import { toast } from "react-hot-toast";
 export interface TabData {
   id: string;
   name: string;
@@ -26,6 +26,7 @@ interface TabContextType {
   goForward: (tabId?: string) => void;
   canGoBack: (tabId?: string) => boolean;
   canGoForward: (tabId?: string) => boolean;
+  setTabName: (id: string, name: string) => void;
 }
 
 const TabContext = createContext<TabContextType | undefined>(undefined);
@@ -76,6 +77,11 @@ export default function TabProvider({ children }: { children: ReactNode }) {
     if (existingTab) {
       // Tab already exists, just switch to it
       setActiveTabId(id);
+      return;
+    }
+
+    if (availableTabs.length >= 5) {
+      toast.error("Maximum of 5 tabs allowed.");
       return;
     }
 
@@ -211,6 +217,14 @@ export default function TabProvider({ children }: { children: ReactNode }) {
     return currentIndex < maxIndex;
   };
 
+  const setTabName = (id: string, name: string) => {
+    setAvailableTabs((prevTabs) =>
+      prevTabs.map((tab) => {
+        if (tab.id !== id) return tab;
+        return { ...tab, name };
+      })
+    );
+  };
   // Add to context value:
   return (
     <TabContext.Provider
@@ -226,6 +240,7 @@ export default function TabProvider({ children }: { children: ReactNode }) {
         goForward,
         canGoBack,
         canGoForward,
+        setTabName,
       }}
     >
       {children}

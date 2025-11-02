@@ -1,0 +1,6 @@
+import React from "react";
+import NotFound from "../components/not-found-tab/not-found";
+
+export default function NotFoundPage() {
+  return <NotFound />;
+}

@@ -139,7 +139,7 @@ export default function SearchResults({ query }: { query: string }) {
               About {results.length} results ({(Math.random() * 0.5).toFixed(2)}{" "}
               seconds)
             </div>
-            <div className="space-y-6 overflow-y-scroll max-h-[250px]">
+            <div className="space-y-6 overflow-y-auto max-h-[250px]">
               {results.map((result) => (
                 <div
                   key={result.id}
