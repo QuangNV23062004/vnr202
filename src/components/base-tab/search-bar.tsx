@@ -4,6 +4,8 @@ import { Search, Sparkles } from "lucide-react";
 import { useTabs } from "@/context/tab-context";
 
 const SUGGESTIONS = [
+  "Youtube",
+  "Gemini",
   "Dòng thời gian Lịch sử",
   "Khủng hoảng Kinh tế - Xã hội",
   "Chiến tranh Biên giới",
