@@ -1,5 +1,11 @@
-import React from "react";
+"use client";
+import { AIChatProvider, useAIChat } from "@/context/ai-context";
+import GeminiContent from "./gemini-content";
 
 export default function GeminiWrapper() {
-  return <div>GeminiWrapper</div>;
+  return (
+    <AIChatProvider>
+      <GeminiContent />
+    </AIChatProvider>
+  );
 }

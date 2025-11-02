@@ -25,7 +25,7 @@ export default function TabAddress({
   };
 
   return (
-    <div className="flex items-center gap-3 bg-gray-50 px-3 py-2 border-b justify-evenly">
+    <div className="flex items-center gap-3 bg-gray-50 px-3 py-2 border-b border-gray-200 justify-evenly">
       {/* Back/Forward buttons */}
       <div className="flex gap-1">
         <button
