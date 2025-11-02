@@ -580,222 +580,295 @@ export default function KhungHoangKinhTe() {
               </h2>
               
               <div className="space-y-6">
-                {/* Official Documents */}
+                {/* Vietnamese Sources */}
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    1. Văn kiện Đảng và Nhà nước
+                    Nguồn Trong nước
                   </h3>
                   <div className="space-y-3">
                     <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
                       <h4 className="font-semibold text-gray-900 mb-1">
-                        Văn kiện Đại hội VI (12/1986)
+                        Văn kiện Đại hội VI (1986)
                       </h4>
                       <p className="text-sm text-gray-700 mb-2">
-                        "Chúng ta đã mắc sai lầm nghiêm trọng trong việc áp dụng máy móc mô hình kế hoạch hóa tập trung"
+                        Phân tích sai lầm trong kế hoạch hóa tập trung và khủng hoảng kinh tế
                       </p>
                       <a 
-                        href="https://nxp.vn" 
+                        href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-v/bao-cao-chinh-tri-cua-ban-chap-hanh-trung-uong-khoa-iv-tai-dai-hoi-dai-bieu-toan-quoc-lan-thu-v-cua-dang-1498" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Nghị quyết 06-NQ/TW (1978)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Về nhiệm vụ kinh tế năm 1978
+                      </p>
+                      <a 
+                        href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/hoi-nghi-bch-trung-uong/khoa-iv/nghi-quyet-so-06-nqtw-ngay-711978-hoi-nghi-lan-thu-ba-ban-chap-hanh-trung-uong-dang-khoa-iv-ve-nhiem-vu-kinh-te-nam-1072" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Chỉ thị 100-CT/TW (1981)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Về sản xuất hàng hóa trong nông nghiệp và thất bại hợp tác xã
+                      </p>
+                      <a 
+                        href="https://thuvienphapluat.vn/van-ban/Lao-dong-Tien-luong/Chi-thi-100-CT-TW-1981-Cai-tien-cong-tac-khoan-mo-rong-san-pham-den-nhom-lao-dong-hop-tac-xa-nong-nghiep-247358.aspx" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tư liệu Văn kiện Đảng
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Lịch sử Việt Nam 1975-2000
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Viện Lịch sử Đảng - NXB Chính trị Quốc gia, 2008
+                      </p>
+                      <a 
+                        href="https://nxbctqg.org.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-green-600 hover:text-green-800 text-sm font-medium inline-flex items-center gap-1"
                       >
                         <ExternalLink className="w-4 h-4" />
                         NXB Chính trị Quốc gia
                       </a>
                     </div>
 
-                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Báo cáo Chính trị Đại hội V (1982)
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-2">
-                        Báo cáo về tình hình kinh tế-xã hội giai đoạn 1976-1980
-                      </p>
-                      <a 
-                        href="https://tulieuvankien.dangcongsan.vn" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Tư liệu Văn kiện Đảng
-                      </a>
-                    </div>
-
-                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Nghị quyết 06-NQ/TW (1979)
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-2">
-                        "Cần xóa bỏ tàn dư tư bản chủ nghĩa trong lưu thông"
-                      </p>
-                      <a 
-                        href="https://tulieuvankien.dangcongsan.vn" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Tư liệu Văn kiện Đảng
-                      </a>
-                    </div>
-
-                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Chỉ thị 100-CT/TW (13/1/1981)
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-2">
-                        Thừa nhận "hợp tác hóa cưỡng bức gây giảm năng suất"
-                      </p>
-                      <a 
-                        href="https://tulieuvankien.dangcongsan.vn" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Tư liệu Văn kiện Đảng
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Academic Sources */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    2. Nghiên cứu và Sách chuyên khảo
-                  </h3>
-                  <div className="space-y-3">
-                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Lịch sử Việt Nam 1975-2000
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        NXB Chính trị Quốc gia, 2008
-                      </p>
-                      <p className="text-sm text-gray-600 italic">
-                        Tập 2: Lịch sử Kinh tế Việt Nam 1945-2000
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Đổi Mới - Nhìn lại 30 năm
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        NXB Chính trị Quốc gia, 2016
-                      </p>
-                      <p className="text-sm text-gray-600 italic">
-                        Phân tích nguyên nhân và quá trình Đổi Mới
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Nghiên cứu Viện Kinh tế Việt Nam
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        Báo cáo về chi tiêu quốc phòng, 1990
-                      </p>
-                      <p className="text-sm text-gray-600 italic">
-                        Ước tính: 15-20% ngân sách nhà nước (1976-1985)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Statistics */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    3. Dữ liệu Thống kê
-                  </h3>
-                  <div className="space-y-3">
                     <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
                       <h4 className="font-semibold text-gray-900 mb-1">
                         Niên giám Thống kê 1976-1985
                       </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        Tổng cục Thống kê Việt Nam
-                      </p>
-                      <p className="text-sm text-gray-600 italic">
-                        Dữ liệu về thiên tai, nông nghiệp, lạm phát
-                      </p>
-                      <p className="text-sm text-gray-600 mt-2">
-                        📍 Lưu trữ: Thư viện Quốc hội / Tổng cục Thống kê
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Báo cáo Ngân hàng Nhà nước 1985
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        Về cải cách giá-lương-tiền và lạm phát
-                      </p>
-                      <p className="text-sm text-gray-600 italic">
-                        Lạm phát 774.7% (9/1985 - 9/1986)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Journals */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    4. Tạp chí và Báo chí
-                  </h3>
-                  <div className="space-y-3">
-                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Tạp chí Cộng sản (số đặc biệt 1986)
-                      </h4>
                       <p className="text-sm text-gray-700 mb-2">
-                        Phân tích về khủng hoảng và Đổi Mới
+                        Tổng cục Thống kê - Dữ liệu thiên tai, nông nghiệp, lạm phát
                       </p>
                       <a 
-                        href="https://tapchicongsan.org.vn" 
+                        href="https://www.gso.gov.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-600 hover:text-purple-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Tổng cục Thống kê
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Tạp chí Cộng sản (1986)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Phân tích khủng hoảng và đường lối Đổi Mới
+                      </p>
+                      <a 
+                        href="https://www.tapchicongsan.org.vn" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-orange-600 hover:text-orange-800 text-sm font-medium inline-flex items-center gap-1"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        tapchicongsan.org.vn
+                        Tạp chí Cộng sản
                       </a>
                     </div>
                   </div>
                 </div>
 
-                {/* Search Tips */}
-                <div className="bg-amber-50 rounded-lg p-6 border border-amber-200">
-                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <Lightbulb className="w-5 h-5 text-amber-600" />
-                    Cách Tìm kiếm Tài liệu
+                {/* International Sources */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    Nguồn Quốc tế
                   </h3>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex gap-2">
-                      <ArrowRight className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
-                      <span>
-                        <strong>Tư liệu Văn kiện Đảng:</strong>{" "}
-                        <a href="https://tulieuvankien.dangcongsan.vn" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                          tulieuvankien.dangcongsan.vn
-                        </a>{" "}
-                        → Tìm: "khủng hoảng 1975-1986"
-                      </span>
-                    </li>
-                    <li className="flex gap-2">
-                      <ArrowRight className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
-                      <span>
-                        <strong>NXB Chính trị Quốc gia:</strong> Tìm kiếm "Đại hội VI" hoặc "Đổi Mới"
-                      </span>
-                    </li>
-                    <li className="flex gap-2">
-                      <ArrowRight className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
-                      <span>
-                        <strong>Thư viện Quốc hội:</strong> Tra cứu Niên giám Thống kê 1976-1985
-                      </span>
-                    </li>
-                  </ul>
+                  <div className="space-y-4">
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Wikipedia. (n.d.). <em>Economic history of Vietnam</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Chi tiết khủng hoảng 1976-1986: lạm phát, năng suất thấp, thiếu hàng hóa. Miền Bắc kế hoạch hóa vs miền Nam thị trường tự do.
+                      </p>
+                      <a 
+                        href="https://en.wikipedia.org/wiki/Economic_history_of_Vietnam" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Xem tài liệu
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Wikipedia. (n.d.). <em>Đổi Mới</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Lạm phát {'>'}700%, tăng trưởng chậm dẫn đến Đổi Mới 1986. Hậu quả bao cấp: lạm phát ẩn, chợ đen.
+                      </p>
+                      <a 
+                        href="https://en.wikipedia.org/wiki/%C4%90%E1%BB%95i_M%E1%BB%9Bi" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Xem tài liệu
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Wikipedia. (n.d.). <em>Five-Year Plans of Vietnam</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Kế hoạch 5 năm 1976-1981 thất bại, mất cân đối nghiêm trọng.
+                      </p>
+                      <a 
+                        href="https://en.wikipedia.org/wiki/Five-Year_Plans_of_Vietnam" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Xem tài liệu
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Wikipedia. (n.d.). <em>Agriculture in Vietnam</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Hợp tác hóa cưỡng bức, năng suất giảm 7% cuối 1970s. Năng suất lao động giảm, thiếu ăn.
+                      </p>
+                      <a 
+                        href="https://en.wikipedia.org/wiki/Agriculture_in_vietnam" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Xem tài liệu
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        World Bank. (n.d.). <em>Military expenditure (% of GDP) - Vietnam</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Dữ liệu lịch sử chi tiêu quốc phòng ~20% GDP (điều chỉnh 1976-1985).
+                      </p>
+                      <a 
+                        href="https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS?locations=VN" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Xem dữ liệu
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Dell, M., & Querubin, P. (2017). <em>The long-run impact of bombing Vietnam</em>
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Journal of Development Economics.
+                      </p>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Phá hủy hạ tầng chiến tranh, ảnh hưởng trường học và dân số lâu dài.
+                      </p>
+                      <a 
+                        href="https://www.sciencedirect.com/science/article/abs/pii/S0304387810000817" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        ScienceDirect
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Malesky, E., & London, J. (2014). <em>"No Responsibility and No Rice": The Rise and Fall of Agricultural Collectivization in Vietnam</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Thất bại collectivization, kháng cự của nông dân, năng suất giảm mạnh.
+                      </p>
+                      <a 
+                        href="https://www.researchgate.net/publication/42851820_No_Responsibility_and_No_Rice_The_Rise_and_Fall_of_Agricultural_Collectivization_in_Vietnam" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        ResearchGate
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        IMF. (2002). <em>VI Stabilization and Adjustment Policies</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Cải cách giá-lương-tiền 1985 thất bại, làm trầm trọng khủng hoảng.
+                      </p>
+                      <a 
+                        href="https://www.elibrary.imf.org/display/book/9781557755384/ch006.xml" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        IMF eLibrary
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Los Angeles Times. (1985). <em>Government Eliminates Subsidies in Economic Reform</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Cải cách 1985 xóa trợ cấp gây "cú sốc", quan liêu, lãng phí, đời sống khó khăn.
+                      </p>
+                      <a 
+                        href="https://www.latimes.com/archives/la-xpm-1985-09-30-fi-17632-story.html" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        LA Times Archives
+                      </a>
+                    </div>
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>

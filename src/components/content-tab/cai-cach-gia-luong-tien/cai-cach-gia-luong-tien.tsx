@@ -444,14 +444,14 @@ export default function CaiCachGiaLuongTien() {
             <div className="bg-white rounded-lg shadow-md p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                 <FileText className="w-7 h-7 text-red-600" />
-                Tài liệu Tham khảo Chính thức
+                Tài liệu Tham khảo
               </h2>
               
               <div className="space-y-6">
-                {/* Official Documents */}
+                {/* Vietnamese Sources */}
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    1. Văn kiện Đảng và Nhà nước
+                    Nguồn Trong nước
                   </h3>
                   <div className="space-y-3">
                     <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
@@ -459,7 +459,7 @@ export default function CaiCachGiaLuongTien() {
                         Nghị quyết 09-NQ/TW (9/9/1985)
                       </h4>
                       <p className="text-sm text-gray-700 mb-2">
-                        Quyết định chính thức về cải cách giá-lương-tiền
+                        Quyết định về cải cách giá-lương-tiền
                       </p>
                       <a 
                         href="https://tulieuvankien.dangcongsan.vn" 
@@ -477,25 +477,7 @@ export default function CaiCachGiaLuongTien() {
                         Quyết định 217-HĐBT (20/9/1985)
                       </h4>
                       <p className="text-sm text-gray-700 mb-2">
-                        Chi tiết về mức tăng giá: Gạo từ 0.6 → 6 đồng/kg (~10x)
-                      </p>
-                      <a 
-                        href="https://tulieuvankien.dangcongsan.vn" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Tư liệu Văn kiện Đảng
-                      </a>
-                    </div>
-
-                    <div className="border-l-4 border-blue-500 pl-4 py-3 bg-blue-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Nghị định 135-CP (1985)
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-2">
-                        Về lương: Lương tối thiểu từ 120 → 350 đồng/tháng (~2.9x)
+                        Chi tiết mức tăng giá: gạo tăng ~10 lần
                       </p>
                       <a 
                         href="https://tulieuvankien.dangcongsan.vn" 
@@ -513,7 +495,7 @@ export default function CaiCachGiaLuongTien() {
                         Văn kiện Đại hội VI (12/1986)
                       </h4>
                       <p className="text-sm text-gray-700 mb-2">
-                        "Chúng ta chưa hiểu đúng quy luật giá trị" - Thừa nhận thất bại
+                        Thừa nhận thất bại và thừa nhận quy luật giá trị, cung cầu
                       </p>
                       <a 
                         href="https://tulieuvankien.dangcongsan.vn" 
@@ -525,195 +507,216 @@ export default function CaiCachGiaLuongTien() {
                         Tư liệu Văn kiện Đảng
                       </a>
                     </div>
-                  </div>
-                </div>
-
-                {/* Financial Data */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    2. Dữ liệu Tài chính
-                  </h3>
-                  <div className="space-y-3">
-                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Báo cáo Ngân hàng Nhà nước (1986)
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        Lạm phát 774.7% (9/1985 - 9/1986)
-                      </p>
-                      <p className="text-sm text-gray-700 mb-1">
-                        M1 (tiền cung ứng) tăng 587% trong cùng kỳ
-                      </p>
-                      <p className="text-sm text-gray-600 mt-2 flex items-center gap-1">
-                        <MapPin className="w-3 h-3" />
-                        Lưu trữ: Thư viện Quốc hội
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        World Bank - Vietnam Economic Report (1987)
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-2">
-                        Phân tích tác động của cải cách giá-lương-tiền 1985
-                      </p>
-                      <a 
-                        href="https://www.worldbank.org" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-purple-600 hover:text-purple-800 text-sm font-medium inline-flex items-center gap-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        worldbank.org
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Academic Sources */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    3. Nghiên cứu và Sách chuyên khảo
-                  </h3>
-                  <div className="space-y-3">
-                    <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Lịch sử Kinh tế Việt Nam 1945-2000 (tập 2)
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        NXB Chính trị Quốc gia, 2004
-                      </p>
-                      <p className="text-sm text-gray-600 italic">
-                        Chi tiết về cải cách giá-lương-tiền và hậu quả
-                      </p>
-                    </div>
 
                     <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
                       <h4 className="font-semibold text-gray-900 mb-1">
                         Hồi ký Nguyễn Văn Linh
                       </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        NXB Chính trị Quốc gia, 2000
+                      <p className="text-sm text-gray-700 mb-2">
+                        NXB Chính trị Quốc gia, 2001 - Ghi chép về phiên họp mất ngủ tháng 10/1985
                       </p>
-                      <p className="text-sm text-gray-600 italic">
-                        Ghi chép về "Phiên họp Mất ngủ" tháng 10/1985
-                      </p>
+                      <a 
+                        href="https://www.nxbctqg.org.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-green-600 hover:text-green-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        NXB Chính trị Quốc gia
+                      </a>
                     </div>
 
                     <div className="border-l-4 border-green-500 pl-4 py-3 bg-green-50 rounded-r-lg">
                       <h4 className="font-semibold text-gray-900 mb-1">
                         Đổi Mới - Nhìn lại 30 năm
                       </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        NXB Chính trị Quốc gia, 2016
+                      <p className="text-sm text-gray-700 mb-2">
+                        NXB Chính trị Quốc gia, 2016 - Ví dụ minh họa về giá cả
                       </p>
-                      <p className="text-sm text-gray-600 italic">
-                        Phân tích quá trình dẫn đến Đổi Mới
+                      <a 
+                        href="https://www.nxbctqg.org.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-green-600 hover:text-green-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        NXB Chính trị Quốc gia
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-purple-500 pl-4 py-3 bg-purple-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        Báo cáo Ngân hàng Nhà nước (1986)
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Lạm phát 774.7%, M1 tăng 587%
                       </p>
+                      <a 
+                        href="https://www.sbv.gov.vn" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-600 hover:text-purple-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Ngân hàng Nhà nước
+                      </a>
                     </div>
                   </div>
                 </div>
 
-                {/* Internal Reports */}
+                {/* International Sources */}
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    4. Báo cáo Nội bộ
+                    Nguồn Quốc tế
                   </h3>
-                  <div className="space-y-3">
-                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Báo cáo Bộ Lao động (1986)
+                  <div className="space-y-4">
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        IMF. (1991). <em>Vietnam: A Case Study in Economic Reform</em>
                       </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        Về tình trạng đời sống người lao động sau cải cách
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Tăng giá 400-600%, lương +200-300%, M1 +587%.
                       </p>
-                      <p className="text-sm text-gray-600 italic">
-                        "Lương tăng nhưng không mua được gì"
-                      </p>
+                      <a 
+                        href="https://www.elibrary.imf.org/view/journals/001/1991/083/article-A001-en.xml" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        IMF eLibrary
+                      </a>
                     </div>
 
-                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Tài liệu Bộ Chính trị (10/1985)
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        World Bank. (n.d.). <em>Inflation, consumer prices (annual %) - Vietnam</em>
                       </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        Biên bản phiên họp bàn về hậu quả cải cách
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> 1986: 774.7% (cao nhất lịch sử). Dữ liệu chính thức.
                       </p>
-                      <p className="text-sm text-gray-600 italic">
-                        "Cải cách đột ngột, không chuẩn bị"
-                      </p>
+                      <a 
+                        href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=VN" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Xem dữ liệu
+                      </a>
                     </div>
 
-                    <div className="border-l-4 border-orange-500 pl-4 py-3 bg-orange-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Báo cáo Bộ Kế hoạch (1986)
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Asian Development Bank. (1990). <em>Vietnam: On the Road to Economic Recovery</em>
                       </h4>
-                      <p className="text-sm text-gray-700">
-                        "Nguồn cung không tăng" - Phân tích về thất bại
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Xác nhận 774.7% là đỉnh siêu lạm phát.
                       </p>
+                      <a 
+                        href="https://www.adb.org/sites/default/files/publication/29702/viet-nam-economic-recovery.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        ADB Publication
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Wikipedia. (n.d.). <em>Economic history of Vietnam</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Chi tiết cải cách: giá gạo x10, lương tăng 2-3 lần.
+                      </p>
+                      <a 
+                        href="https://en.wikipedia.org/wiki/Economic_history_of_Vietnam" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Xem tài liệu
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Wikipedia. (n.d.). <em>Đổi Mới</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Chuyển sang kinh tế thị trường định hướng XHCN sau thất bại 1985.
+                      </p>
+                      <a 
+                        href="https://en.wikipedia.org/wiki/%C4%90%E1%BB%95i_M%E1%BB%9Bi" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Xem tài liệu
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Hayton, B. (2010). <em>Vietnam: Rising Dragon</em>
+                      </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Yale University Press.
+                      </p>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Dân thành phố bỏ về quê do mất niềm tin vào tiền tệ.
+                      </p>
+                      <a 
+                        href="https://yalebooks.yale.edu/book/9780300170931/vietnam" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Yale Books
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        IMF. (1986). <em>IMF Staff Report: Vietnam</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Cung không tăng → khan hiếm trầm trọng.
+                      </p>
+                      <a 
+                        href="https://www.elibrary.imf.org" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        IMF eLibrary
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        World Bank. (1996). <em>Vietnam's Renovation: 1986–Present</em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Khuyến khích kinh tế hộ gia đình, mở cửa FDI sau Đổi Mới.
+                      </p>
+                      <a 
+                        href="https://documents.worldbank.org/en/publication/documents-reports" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        World Bank Documents
+                      </a>
                     </div>
                   </div>
-                </div>
-
-                {/* Oral History */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    5. Lịch sử Trực tiếp
-                  </h3>
-                  <div className="space-y-3">
-                    <div className="border-l-4 border-indigo-500 pl-4 py-3 bg-indigo-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Nghiên cứu Di cư 1985-1986
-                      </h4>
-                      <p className="text-sm text-gray-700 mb-1">
-                        Viện Xã hội học Việt Nam
-                      </p>
-                      <p className="text-sm text-gray-600 italic">
-                        Về hiện tượng "bỏ thành phố về quê" sau cải cách
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-indigo-500 pl-4 py-3 bg-indigo-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-1">
-                        Tài liệu Nội bộ (1986)
-                      </h4>
-                      <p className="text-sm text-gray-700">
-                        Ghi chép giá thực tế tại Hà Nội: Tô phở 10 → 87 đồng
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Search Tips */}
-                <div className="bg-red-50 rounded-lg p-6 border border-red-200">
-                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <Lightbulb className="w-5 h-5 text-red-600" />
-                    Cách Tìm kiếm Tài liệu
-                  </h3>
-                  <ul className="space-y-2 text-sm text-gray-700">
-                    <li className="flex gap-2">
-                      <ArrowRight className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
-                      <span>
-                        <strong>Tư liệu Văn kiện Đảng:</strong>{" "}
-                        <a href="https://tulieuvankien.dangcongsan.vn" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                          tulieuvankien.dangcongsan.vn
-                        </a>{" "}
-                        → Tìm: "cải cách giá lương tiền 1985"
-                      </span>
-                    </li>
-                    <li className="flex gap-2">
-                      <ArrowRight className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
-                      <span>
-                        <strong>World Bank:</strong> Search "Vietnam 1985 reform" cho báo cáo kinh tế
-                      </span>
-                    </li>
-                    <li className="flex gap-2">
-                      <ArrowRight className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
-                      <span>
-                        <strong>Thư viện Quốc hội:</strong> Tra cứu Báo cáo Ngân hàng Nhà nước 1986
-                      </span>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
