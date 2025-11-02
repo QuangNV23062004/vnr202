@@ -12,6 +12,9 @@ import MatNgu from "../content-tab/mat-ngu/mat-ngu";
 import ThoiKyBaoCap from "../content-tab/thoi-ky-bao-cap/thoi-ky-bao-cap";
 import LamPhat774 from "../content-tab/lam-phat-774/lam-phat-774-wrapper";
 import KetNoiHienTai from "../content-tab/ket-noi-hien-tai/ket-noi-hien-tai";
+import KhungHoangKinhTe from "../content-tab/khung-hoang-kinh-te/khung-hoang-kinh-te";
+import ChienTranhBienGioi from "../content-tab/chien-tranh-bien-gioi/chien-tranh-bien-gioi";
+import CaiCachGiaLuongTien from "../content-tab/cai-cach-gia-luong-tien/cai-cach-gia-luong-tien";
 interface TabContentRendererProps {
   address: string;
 }
@@ -55,6 +58,12 @@ export default function TabContentRenderer({
     switch (url.pathname) {
       case "/dong-thoi-gian-1975-1986":
         return <DongThoiGian />;
+      case "/khung-hoang-kinh-te-xa-hoi":
+        return <KhungHoangKinhTe />;
+      case "/chien-tranh-bien-gioi":
+        return <ChienTranhBienGioi />;
+      case "/cai-cach-gia-luong-tien":
+        return <CaiCachGiaLuongTien />;
       case "/giai-ma-lam-phat-774":
         return <LamPhat774 />;
       case "/phien-hop-mat-ngu-10-1985":

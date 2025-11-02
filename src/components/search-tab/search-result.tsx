@@ -130,7 +130,7 @@ export default function SearchResults({ query }: { query: string }) {
       </div>
 
       {/* Results */}
-      <div className="max-w-4xl mx-auto px-4 py-6">
+      <div className="max-w-6xl mx-auto px-4 py-6">
         {loading ? (
           <div className="text-gray-600">Loading...</div>
         ) : results.length > 0 ? (
@@ -172,12 +172,6 @@ export default function SearchResults({ query }: { query: string }) {
               </button>
               <button className="px-3 py-1 text-sm bg-blue-500 text-white rounded">
                 1
-              </button>
-              <button className="px-3 py-1 text-sm text-blue-600 hover:bg-gray-100 rounded">
-                2
-              </button>
-              <button className="px-3 py-1 text-sm text-blue-600 hover:bg-gray-100 rounded">
-                3
               </button>
               <button className="px-3 py-1 text-sm text-blue-600 hover:bg-gray-100 rounded">
                 Next &gt;

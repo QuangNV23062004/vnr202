@@ -5,9 +5,10 @@ import { useTabs } from "@/context/tab-context";
 
 const SUGGESTIONS = [
   "Dòng thời gian Lịch sử",
-  "Lạm phát 774%",
+  "Khủng hoảng Kinh tế - Xã hội",
+  "Chiến tranh Biên giới",
+  "Cải cách Giá-Lương-Tiền",
   "Phiên họp Mất ngủ",
-  "Ký ức Thời Bao cấp",
   "Kết nối với Hiện đại",
 ];
 
@@ -121,7 +122,7 @@ export default function SearchBar() {
             }}
             type="text"
             placeholder="Search Google or type a URL"
-            className="flex-grow focus:outline-none text-gray-700"
+            className="grow focus:outline-none text-gray-700"
             onKeyDown={handleKeyPress}
           />
           <button

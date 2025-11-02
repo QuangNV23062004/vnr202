@@ -20,7 +20,7 @@ export default function TabLayout() {
               url={currentTab.address}
               setUrl={updateCurrentTabAddress}
             />
-            <div className="flex-1 overflow-hidden">
+            <div className="flex-1 overflow-y-auto">
               <TabContentRenderer address={currentTab.address} />
             </div>
           </>
