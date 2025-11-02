@@ -3,7 +3,7 @@
 import { X, Plus } from "lucide-react";
 import { useTabs } from "../../context/tab-context";
 import { useEffect } from "react";
-
+import { v4 as uuid } from "uuid";
 export default function TabBar() {
   const { availableTabs, activeTabId, setActiveTabId, closeTab, openTab } = useTabs();
 
@@ -34,8 +34,9 @@ export default function TabBar() {
   }, [activeTabId]);
 
   useEffect(() => {}, [availableTabs]);
+
   return (
-    <div className="flex items-end bg-gray-200 px-2 pt-2 border-b">
+    <div className="flex items-end bg-gray-200 px-2 pt-2 border-b border-gray-300 gap-1">
       {availableTabs.map((tab) => (
         <div
           key={tab.id}
@@ -45,7 +46,7 @@ export default function TabBar() {
             border-t border-l border-r rounded-t-md
             ${
               activeTabId === tab.id
-                ? "bg-white text-black border-gray-300 -mb-[1px]"
+                ? "bg-gray-50 text-black border-gray-300 -mb-[1px]"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-50 border-gray-300"
             }
           `}
