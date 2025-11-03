@@ -3,16 +3,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { Search, Sparkles } from "lucide-react";
 import { useTabs } from "@/context/tab-context";
 
-const SUGGESTIONS = [
-  "Youtube",
-  "Gemini",
-  "Dòng thời gian Lịch sử",
-  "Khủng hoảng Kinh tế - Xã hội",
-  "Chiến tranh Biên giới",
-  "Cải cách Giá-Lương-Tiền",
-  "Phiên họp Mất ngủ",
-  "Kết nối với Hiện đại",
-];
+interface PageItem {
+  title: string;
+  domain: string;
+}
 
 // Convert Vietnamese text to URL-friendly slug
 const toSlug = (text: string): string => {
@@ -44,15 +38,39 @@ export default function SearchBar() {
   const [query, setQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
+  const [allTitles, setAllTitles] = useState<string[]>([]);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Fetch suggestions from pages.json
+  useEffect(() => {
+    fetch("/pages.json")
+      .then((res) => res.json())
+      .then((data: PageItem[]) => {
+        const titles = data.map((item) => item.title);
+        setAllTitles(titles);
+
+        const domainMap = new Map<string, string>();
+        data.forEach((item) => {
+          if (!domainMap.has(item.domain)) {
+            domainMap.set(item.domain, item.title);
+          }
+        });
+        const uniqueTitles = Array.from(domainMap.values());
+        setSuggestions(uniqueTitles);
+      })
+      .catch((error) => {
+        console.error("Error fetching pages.json:", error);
+      });
+  }, []);
 
   // Filter suggestions based on query
   useEffect(() => {
     if (query.trim()) {
       const querySlug = toSlug(query);
-      const filtered = SUGGESTIONS.filter((suggestion) =>
-        toSlug(suggestion).includes(querySlug)
+      const filtered = allTitles.filter((title) =>
+        toSlug(title).includes(querySlug)
       );
       setFilteredSuggestions(filtered);
       setShowSuggestions(filtered.length > 0);
@@ -60,7 +78,7 @@ export default function SearchBar() {
       setFilteredSuggestions([]);
       setShowSuggestions(false);
     }
-  }, [query]);
+  }, [query, allTitles]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -160,7 +178,7 @@ export default function SearchBar() {
 
       {/* Quick search buttons */}
       <div className="flex flex-wrap justify-center gap-3 mt-6 max-w-2xl">
-        {SUGGESTIONS.map((text, index) => (
+        {suggestions.map((text, index) => (
           <button
             key={index}
             onClick={() => handleQuickButtonClick(text)}

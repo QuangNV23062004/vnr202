@@ -10,16 +10,13 @@ import GeminiWrapper from "../gemini-tab/gemini-wrapper";
 
 //Content Tab placeholders, can be changes later if wanted
 import DongThoiGian from "../content-tab/dong-thoi-gian/dong-thoi-gian-wrapper";
-import MatNgu from "../content-tab/mat-ngu/mat-ngu";
-import ThoiKyBaoCap from "../content-tab/thoi-ky-bao-cap/thoi-ky-bao-cap";
-import LamPhat774 from "../content-tab/lam-phat-774/lam-phat-774-wrapper";
-import KetNoiHienTai from "../content-tab/ket-noi-hien-tai/ket-noi-hien-tai";
 import KhungHoangKinhTe from "../content-tab/khung-hoang-kinh-te/khung-hoang-kinh-te";
 import ChienTranhBienGioi from "../content-tab/chien-tranh-bien-gioi/chien-tranh-bien-gioi";
 import CaiCachGiaLuongTien from "../content-tab/cai-cach-gia-luong-tien/cai-cach-gia-luong-tien";
 import WatchVideo from "../youtube-tab/watch-video/watch-video";
 import BaseYoutube from "../youtube-tab/base-youtube/base-youtube";
 import SearchYoutube from "../youtube-tab/search-youtube/search-youtube";
+import HomepageWrapper from "../content-tab/home-page/homepage-wrapper";
 
 interface TabContentRendererProps {
   address: string;
@@ -92,17 +89,11 @@ export default function TabContentRenderer({
         case "/cai-cach-gia-luong-tien":
           tabName = "Cải Cách Giá - Lương - Tiền";
           break;
-        case "/giai-ma-lam-phat-774":
-          tabName = "Giải Mã Lạm Phát 774%";
+        case "/":
+          tabName = "Đổi Mới 1986 - Trang Chủ";
           break;
-        case "/phien-hop-mat-ngu-10-1985":
-          tabName = "Phiên Họp Mật Ngũ 10/1985";
-          break;
-        case "/ky-uc-thoi-bao-cap":
-          tabName = "Ký Ức Thời Bao Cấp";
-          break;
-        case "/ket-noi-voi-hien-dai":
-          tabName = "Kết Nối Với Hiện Đại";
+        case "/dong-thoi-gian-1975-1986":
+          tabName = "Dòng Thời Gian (1975-1986)";
           break;
         default:
           tabName = "404 - Not Found";
@@ -147,6 +138,8 @@ export default function TabContentRenderer({
   // Custom content pages for vnr202-nhom5.com domain
   if (url.hostname === "vnr202-nhom5.com") {
     switch (url.pathname) {
+      case "/":
+        return <HomepageWrapper />;
       case "/dong-thoi-gian-1975-1986":
         return <DongThoiGian />;
       case "/khung-hoang-kinh-te-xa-hoi":
@@ -155,14 +148,6 @@ export default function TabContentRenderer({
         return <ChienTranhBienGioi />;
       case "/cai-cach-gia-luong-tien":
         return <CaiCachGiaLuongTien />;
-      case "/giai-ma-lam-phat-774":
-        return <LamPhat774 />;
-      case "/phien-hop-mat-ngu-10-1985":
-        return <MatNgu />;
-      case "/ky-uc-thoi-bao-cap":
-        return <ThoiKyBaoCap />;
-      case "/ket-noi-voi-hien-dai":
-        return <KetNoiHienTai />;
     }
   }
 

@@ -42,7 +42,10 @@ export const useTabs = () => {
 let pagesDataCache: Array<{ url: string; title: string }> | null = null;
 
 // Helper function to get tab name from address
-const getTabName = async (address: string, currentName: string): Promise<string> => {
+const getTabName = async (
+  address: string,
+  currentName: string
+): Promise<string> => {
   try {
     const url = new URL(
       address.startsWith("http") ? address : `https://${address}`
@@ -52,14 +55,21 @@ const getTabName = async (address: string, currentName: string): Promise<string>
     if (url.searchParams.has("q")) {
       return `${url.searchParams.get("q")} - Google Search`;
     }
-    
+
     // Google home page
-    if ((url.hostname === "www.google.com" || url.hostname === "google.com") && url.pathname === "/" && !url.search) {
+    if (
+      (url.hostname === "www.google.com" || url.hostname === "google.com") &&
+      url.pathname === "/" &&
+      !url.search
+    ) {
       return "Google";
     }
 
     // Gemini assistant
-    if (url.hostname === "gemini.google.com" && url.pathname === "/app/vnr202-assistance") {
+    if (
+      url.hostname === "gemini.google.com" &&
+      url.pathname === "/app/vnr202-assistance"
+    ) {
       return "VNR202 Assistance";
     }
 
@@ -85,7 +95,10 @@ const getTabName = async (address: string, currentName: string): Promise<string>
       const matchedPage = pagesDataCache?.find((page) => {
         try {
           const pageUrl = new URL(page.url);
-          return pageUrl.hostname === url.hostname && pageUrl.pathname === url.pathname;
+          return (
+            pageUrl.hostname === url.hostname &&
+            pageUrl.pathname === url.pathname
+          );
         } catch {
           return false;
         }
@@ -114,12 +127,19 @@ const getTabNameSync = (address: string, currentName: string): string => {
     if (url.searchParams.has("q")) {
       return `${url.searchParams.get("q")} - Google Search`;
     }
-    
-    if ((url.hostname === "www.google.com" || url.hostname === "google.com") && url.pathname === "/" && !url.search) {
+
+    if (
+      (url.hostname === "www.google.com" || url.hostname === "google.com") &&
+      url.pathname === "/" &&
+      !url.search
+    ) {
       return "Google";
     }
 
-    if (url.hostname === "gemini.google.com" && url.pathname === "/app/vnr202-assistance") {
+    if (
+      url.hostname === "gemini.google.com" &&
+      url.pathname === "/app/vnr202-assistance"
+    ) {
       return "VNR202 Assistance";
     }
 
@@ -128,7 +148,10 @@ const getTabNameSync = (address: string, currentName: string): string => {
       const matchedPage = pagesDataCache.find((page) => {
         try {
           const pageUrl = new URL(page.url);
-          return pageUrl.hostname === url.hostname && pageUrl.pathname === url.pathname;
+          return (
+            pageUrl.hostname === url.hostname &&
+            pageUrl.pathname === url.pathname
+          );
         } catch {
           return false;
         }
@@ -186,6 +209,10 @@ export default function TabProvider({ children }: { children: ReactNode }) {
 
   // Close a tab
   const closeTab = (id: string) => {
+    if (availableTabs.length === 1) {
+      toast.error("Cannot close the last tab.");
+      return;
+    }
     setAvailableTabs((prevTabs) => {
       const tabIndex = prevTabs.findIndex((tab) => tab.id === id);
       if (tabIndex === -1) return prevTabs;
@@ -197,7 +224,8 @@ export default function TabProvider({ children }: { children: ReactNode }) {
       if (id === activeTabId) {
         // If closing the first tab, switch to the next one (which becomes first)
         // Otherwise, try previous tab, then fallback to first tab
-        const newActiveTab = updatedTabs[tabIndex - 1] || updatedTabs[0] || updatedTabs[tabIndex];
+        const newActiveTab =
+          updatedTabs[tabIndex - 1] || updatedTabs[0] || updatedTabs[tabIndex];
         if (newActiveTab) {
           setActiveTabId(newActiveTab.id);
         }
@@ -226,7 +254,7 @@ export default function TabProvider({ children }: { children: ReactNode }) {
 
         // Get new name (use sync version for immediate update)
         const newName = getTabNameSync(newAddress, tab.name);
-        
+
         // Also update async for better accuracy
         getTabName(newAddress, tab.name).then((asyncName) => {
           if (asyncName !== newName) {
@@ -326,7 +354,11 @@ export default function TabProvider({ children }: { children: ReactNode }) {
       const draggedIndex = prevTabs.findIndex((tab) => tab.id === draggedId);
       const targetIndex = prevTabs.findIndex((tab) => tab.id === targetId);
 
-      if (draggedIndex === -1 || targetIndex === -1 || draggedIndex === targetIndex) {
+      if (
+        draggedIndex === -1 ||
+        targetIndex === -1 ||
+        draggedIndex === targetIndex
+      ) {
         return prevTabs;
       }
 
