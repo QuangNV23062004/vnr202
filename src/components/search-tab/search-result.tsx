@@ -20,6 +20,7 @@ export default function SearchResults({ query }: { query: string }) {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchInput, setSearchInput] = useState(query);
+  const [searchTime, setSearchTime] = useState("0.00"); // New state for stable search time
 
   useEffect(() => {
     setSearchInput(query);
@@ -39,6 +40,7 @@ export default function SearchResults({ query }: { query: string }) {
         );
 
         setResults(filtered);
+        setSearchTime((Math.random() * 0.5).toFixed(2)); // Compute once here
       } catch (error) {
         console.error("Error fetching search results:", error);
       } finally {
@@ -136,8 +138,8 @@ export default function SearchResults({ query }: { query: string }) {
         ) : results.length > 0 ? (
           <div>
             <div className="text-gray-600 text-sm mb-6">
-              About {results.length} results ({(Math.random() * 0.5).toFixed(2)}{" "}
-              seconds)
+              About {results.length} results ({searchTime} seconds){" "}
+              {/* Use stable state value */}
             </div>
             <div className="space-y-6 overflow-y-auto max-h-[250px]">
               {results.map((result) => (
