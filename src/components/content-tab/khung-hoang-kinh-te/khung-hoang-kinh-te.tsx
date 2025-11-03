@@ -167,19 +167,12 @@ export default function KhungHoangKinhTe() {
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
-                        Đóng quân 200,000 binh sĩ tại Campuchia (1978-1989)
+                        Đóng quân hàng ngàn binh sĩ tại Campuchia (1978-1989)
                       </span>
                     </li>
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>Xung đột biên giới với Trung Quốc (1979-1989)</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
-                      <span>
-                        Chi tiêu quốc phòng chiếm ~15-25% ngân sách nhà nước
-                        (~20% GDP, 1976-1985), lấy đi nguồn lực cho phát triển
-                      </span>
                     </li>
                   </ul>
                 </div>
@@ -187,25 +180,54 @@ export default function KhungHoangKinhTe() {
                 {/* International isolation */}
                 <div className="border-l-4 border-blue-500 pl-6 py-2">
                   <h3 className="text-lg font-bold text-gray-900 mb-3">
-                    3. Cô lập Quốc tế
+                    3. Cô lập Quốc tế & Phụ thuộc Viện trợ
                   </h3>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-3 text-gray-700">
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
-                      <span>
-                        Cấm vận kinh tế từ phương Tây do vấn đề Campuchia
-                      </span>
+                      <div>
+                        <strong>Phụ thuộc nặng nề vào Liên Xô:</strong> Thương
+                        mại với Liên Xô chiếm khoảng 70% tổng kim ngạch ngoại
+                        thương của Việt Nam trong những năm 1980s{" "}
+                        <span className="text-xs text-gray-500">
+                          (Forsberg, 2007)
+                        </span>
+                      </div>
                     </li>
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
-                      <span>Mất nguồn viện trợ và đầu tư nước ngoài</span>
+                      <div>
+                        <strong>Viện trợ chiếm phần lớn ngân sách:</strong> Các
+                        khoản vay và viện trợ nước ngoài chiếm hơn 63% ngân sách
+                        nhà nước{" "}
+                        <span className="text-xs text-gray-500">
+                          (Vietnam Law Magazine)
+                        </span>
+                      </div>
                     </li>
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
-                      <span>
-                        Viện trợ từ Liên Xô chiếm ~60-65% tổng viện trợ song
-                        phương (1976-1985)
-                      </span>
+                      <div>
+                        <strong>Trung Quốc cắt viện trợ từ 1977:</strong> Viện
+                        trợ từ các nước xã hội chủ nghĩa giảm mạnh, Trung Quốc
+                        hoàn toàn ngừng hỗ trợ Việt Nam từ năm 1977{" "}
+                        <span className="text-xs text-gray-500">
+                          (Vietnam Law Magazine)
+                        </span>
+                      </div>
+                    </li>
+                    <li className="flex gap-2">
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
+                      <div>
+                        <strong>
+                          Cấm vận và mất viện trợ phương Tây:
+                        </strong>{" "}
+                        Viện trợ từ phương Tây và Nhật Bản bị gián đoạn sau khi
+                        Việt Nam can thiệp vào Campuchia{" "}
+                        <span className="text-xs text-gray-500">
+                          (Forsberg, 2007)
+                        </span>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -219,8 +241,7 @@ export default function KhungHoangKinhTe() {
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
-                        Hạn hán, lũ lụt thường xuyên làm mất mùa (1977, 1978,
-                        1984, 1985)
+                        Hạn hán, lũ lụt thường xuyên làm mất mùa (1977, 1978)
                       </span>
                     </li>
                     <li className="flex gap-2">
@@ -871,21 +892,54 @@ export default function KhungHoangKinhTe() {
 
                     <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
                       <h4 className="font-semibold text-gray-900 mb-2">
-                        World Bank. (n.d.).{" "}
-                        <em>Military expenditure (% of GDP) - Vietnam</em>
+                        Forsberg, L. T. (2007).{" "}
+                        <em>
+                          Economic reforms in Vietnam: Transition or
+                          reconstruction
+                        </em>
                       </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Stockholm School of Economics.
+                      </p>
                       <p className="text-xs text-gray-600 mb-2">
-                        <strong>Nội dung:</strong> Dữ liệu lịch sử chi tiêu quốc
-                        phòng ~20% GDP (điều chỉnh 1976-1985).
+                        <strong>Nội dung:</strong> Phân tích sự phụ thuộc nặng
+                        nề vào viện trợ Liên Xô (70% kim ngạch ngoại thương trong
+                        thập niên 1980), và sự gián đoạn viện trợ từ phương Tây,
+                        Nhật Bản sau vấn đề Campuchia.
                       </p>
                       <a
-                        href="https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS?locations=VN"
+                        href="https://swopec.hhs.se/eijswp/abs/eijswp0226.htm"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        Xem dữ liệu
+                        SWOPEC (Stockholm Working Papers)
+                      </a>
+                    </div>
+
+                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Vietnam Law Magazine. (n.d.).{" "}
+                        <em>
+                          Vietnam secures remarkable economic successes since
+                          national reunification
+                        </em>
+                      </h4>
+                      <p className="text-xs text-gray-600 mb-2">
+                        <strong>Nội dung:</strong> Viện trợ và các khoản vay
+                        nước ngoài chiếm hơn 63% ngân sách. Viện trợ từ các nước
+                        xã hội chủ nghĩa giảm mạnh, Trung Quốc hoàn toàn ngừng
+                        hỗ trợ từ năm 1977.
+                      </p>
+                      <a
+                        href="https://vietnamlawmagazine.vn/vietnam-secures-remarkable-economic-successes-since-national-reunification-7476.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Vietnam Law Magazine
                       </a>
                     </div>
 
