@@ -161,18 +161,32 @@ export default function KhungHoangKinhTe() {
                 {/* Border wars */}
                 <div className="border-l-4 border-orange-500 pl-6 py-2">
                   <h3 className="text-lg font-bold text-gray-900 mb-3">
-                    2. Chiến tranh Biên giới (CQ7.3)
+                    2. Chiến tranh Biên giới & Gánh nặng Quốc phòng (CQ7.3)
                   </h3>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-3 text-gray-700">
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
-                      <span>
-                        Đóng quân hàng ngàn binh sĩ tại Campuchia (1978-1989)
-                      </span>
+                      <div>
+                        <strong>Can thiệp quân sự tại Campuchia (1978-1989):</strong>{" "}
+                        Việt Nam duy trì lực lượng quân đội tại Campuchia sau khi
+                        can thiệp vào tháng 12/1978, tốn kém nguồn lực quốc phòng
+                        lớn trong suốt thập kỷ 1980s
+                      </div>
                     </li>
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
-                      <span>Xung đột biên giới với Trung Quốc (1979-1989)</span>
+                      <div>
+                        <strong>Chiến tranh biên giới với Trung Quốc (1979):</strong>{" "}
+                        Xung đột vũ trang với Trung Quốc vào tháng 2-3/1979, sau
+                        đó vẫn căng thẳng biên giới trong những năm 1980s
+                      </div>
+                    </li>
+                    <li className="flex gap-2">
+                      <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
+                      <span>
+                        Gánh nặng quốc phòng khổng lồ làm cạn kiệt ngân sách và
+                        nguồn lực phát triển kinh tế
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -208,11 +222,11 @@ export default function KhungHoangKinhTe() {
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <div>
-                        <strong>Trung Quốc cắt viện trợ từ 1977:</strong> Viện
+                        <strong>Trung Quốc cắt viện trợ từ 1978:</strong> Viện
                         trợ từ các nước xã hội chủ nghĩa giảm mạnh, Trung Quốc
-                        hoàn toàn ngừng hỗ trợ Việt Nam từ năm 1977{" "}
+                        hoàn toàn ngừng hỗ trợ Việt Nam từ ngày 3/7/1978{" "}
                         <span className="text-xs text-gray-500">
-                          (Vietnam Law Magazine)
+                          (Amelica Portal)
                         </span>
                       </div>
                     </li>
@@ -241,7 +255,7 @@ export default function KhungHoangKinhTe() {
                     <li className="flex gap-2">
                       <Circle className="w-4 h-4 text-amber-600 fill-amber-600 mt-0.5 shrink-0" />
                       <span>
-                        Hạn hán, lũ lụt thường xuyên làm mất mùa (1977, 1978)
+                        Hạn hán, lũ lụt thường xuyên làm mất mùa trong thập kỷ 1970s
                       </span>
                     </li>
                     <li className="flex gap-2">
@@ -668,7 +682,7 @@ export default function KhungHoangKinhTe() {
               <p className="text-gray-700 leading-relaxed">
                 Đỉnh cao của sự thất bại là{" "}
                 <strong className="text-red-600">
-                  cải cách giá-lương-tiền 1985 (CQ8.1)
+                  cải cách giá-lương-tiền năm 1985 (CQ8.1)
                 </strong>{" "}
                 - "cú sốc" cuối cùng khiến Đảng buộc phải thừa nhận:{" "}
                 <strong>Cơ chế bao cấp đã lỗi thời, cần phải Đổi Mới</strong>.
@@ -876,7 +890,7 @@ export default function KhungHoangKinhTe() {
                       </h4>
                       <p className="text-xs text-gray-600 mb-2">
                         <strong>Nội dung:</strong> Hợp tác hóa cưỡng bức, năng
-                        suất giảm 7% cuối 1970s. Năng suất lao động giảm, thiếu
+                        suất giảm mạnh cuối 1970s. Năng suất lao động giảm, thiếu
                         ăn.
                       </p>
                       <a
@@ -929,8 +943,7 @@ export default function KhungHoangKinhTe() {
                       <p className="text-xs text-gray-600 mb-2">
                         <strong>Nội dung:</strong> Viện trợ và các khoản vay
                         nước ngoài chiếm hơn 63% ngân sách. Viện trợ từ các nước
-                        xã hội chủ nghĩa giảm mạnh, Trung Quốc hoàn toàn ngừng
-                        hỗ trợ từ năm 1977.
+                        xã hội chủ nghĩa giảm mạnh.
                       </p>
                       <a
                         href="https://vietnamlawmagazine.vn/vietnam-secures-remarkable-economic-successes-since-national-reunification-7476.html"
@@ -1104,7 +1117,7 @@ export default function KhungHoangKinhTe() {
                     CQ8.1 - Đỉnh cao Khủng hoảng
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition">
-                    Cải cách Giá-Lương-Tiền (9/1985)
+                    Cải cách Giá-Lương-Tiền (1985)
                   </h3>
                   <p className="text-sm text-gray-600">
                     "Cú sốc" thất bại và lạm phát 774.7% - hậu quả của tư duy cũ

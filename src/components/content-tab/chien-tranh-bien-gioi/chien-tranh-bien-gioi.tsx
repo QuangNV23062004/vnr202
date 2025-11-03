@@ -125,18 +125,18 @@ export default function ChienTranhBienGioi() {
               <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-orange-600">
                 <Users className="w-8 h-8 text-orange-600 mb-3" />
                 <h3 className="text-3xl font-bold text-gray-900 mb-1">
-                  ~500,000
+                  ~200,000
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Quân số điều động (peak 1980s)
+                  Quân số tại Campuchia (peak 1980s)
                 </p>
               </div>
               <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-amber-600">
                 <TrendingDown className="w-8 h-8 text-amber-600 mb-3" />
                 <h3 className="text-3xl font-bold text-gray-900 mb-1">
-                  15-25%
+                  80-90%
                 </h3>
-                <p className="text-gray-600 text-sm">Ngân sách (~20% GDP)</p>
+                <p className="text-gray-600 text-sm">Phụ thuộc viện trợ Liên Xô</p>
               </div>
             </div>
 
@@ -231,14 +231,12 @@ export default function ChienTranhBienGioi() {
                   </h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
                     <li>
-                      • Chi tiêu quốc phòng chiếm ~15-25% ngân sách nhà nước
-                      (~20% GDP)
+                      • Chi tiêu quốc phòng chiếm tỷ trọng lớn trong ngân sách nhà nước
                     </li>
                     <li>
-                      • Huy động ~500,000 thanh niên vào quân đội (bao gồm luân
-                      phiên)
+                      • Huy động hàng trăm ngàn thanh niên vào quân đội
                     </li>
-                    <li>• Giảm ~10-15% lực lượng lao động sản xuất</li>
+                    <li>• Giảm đáng kể lực lượng lao động sản xuất</li>
                     <li>• Chi phí vũ khí, trang bị, hậu cần khổng lồ</li>
                   </ul>
                 </div>
@@ -253,7 +251,7 @@ export default function ChienTranhBienGioi() {
                       • Mất đi viện trợ quốc tế (Nhật Bản, Thụy Điển đình chỉ
                       1979)
                     </li>
-                    <li>• Phụ thuộc ~80-90% vào viện trợ từ Liên Xô</li>
+                    <li>• Phụ thuộc 80-90% vào viện trợ từ Liên Xô</li>
                   </ul>
                 </div>
               </div>
@@ -272,69 +270,36 @@ export default function ChienTranhBienGioi() {
               {/* Budget Allocation */}
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Phân bổ Ngân sách Nhà nước (1980-1985)
+                  Gánh nặng Ngân sách trong thập kỷ 1980s
                 </h3>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-700 font-medium">
-                        Quốc phòng & An ninh
+                <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                  <p className="text-gray-700 mb-4">
+                    Chi tiêu quốc phòng chiếm tỷ trọng lớn trong ngân sách nhà nước
+                    do phải duy trì lực lượng quân đội đông đảo trên hai mặt trận:
+                  </p>
+                  <ul className="space-y-2 text-gray-700 text-sm">
+                    <li className="flex gap-2">
+                      <span className="text-red-600">•</span>
+                      <span>
+                        <strong>Biên giới Tây Nam:</strong> Duy trì 150,000-200,000 quân
+                        tại Campuchia (peak ~200,000)
                       </span>
-                      <span className="text-red-600 font-bold">~15-25%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6">
-                      <div
-                        className="bg-red-600 h-6 rounded-full"
-                        style={{ width: "25%" }}
-                      ></div>
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">
-                      Tương đương ~20% GDP (theo SIPRI)
-                    </p>
-                  </div>
-
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-700 font-medium">
-                        Kinh tế & Đầu tư
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-orange-600">•</span>
+                      <span>
+                        <strong>Biên giới Phía Bắc:</strong> Lực lượng phòng thủ lớn
+                        đối phó căng thẳng với Trung Quốc
                       </span>
-                      <span className="text-blue-600 font-bold">~30%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6">
-                      <div
-                        className="bg-blue-600 h-6 rounded-full"
-                        style={{ width: "30%" }}
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-700 font-medium">
-                        Giáo dục & Y tế
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-amber-600">•</span>
+                      <span>
+                        <strong>Hậu cần & Vũ khí:</strong> Chi phí khổng lồ cho trang
+                        bị, đạn dược, hậu cần
                       </span>
-                      <span className="text-green-600 font-bold">~15%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6">
-                      <div
-                        className="bg-green-600 h-6 rounded-full"
-                        style={{ width: "15%" }}
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-700 font-medium">Khác</span>
-                      <span className="text-gray-600 font-bold">~10%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6">
-                      <div
-                        className="bg-gray-500 h-6 rounded-full"
-                        style={{ width: "10%" }}
-                      ></div>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -380,88 +345,39 @@ export default function ChienTranhBienGioi() {
               </div>
             </div>
 
-            {/* Comparison Table */}
+            {/* Impact Overview */}
             <div className="bg-white rounded-lg shadow-md p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                So sánh Giai đoạn trước và sau Chiến tranh
+                Tác động Kinh tế của Chiến tranh Biên giới
               </h2>
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b-2 border-gray-300">
-                      <th className="text-left py-3 px-4 text-gray-900 font-semibold">
-                        Chỉ tiêu
-                      </th>
-                      <th className="text-center py-3 px-4 text-gray-900 font-semibold">
-                        1976-1978
-                      </th>
-                      <th className="text-center py-3 px-4 text-gray-900 font-semibold">
-                        1979-1985
-                      </th>
-                      <th className="text-center py-3 px-4 text-gray-900 font-semibold">
-                        Biến động
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-3 px-4 text-gray-700">
-                        Chi quốc phòng / Ngân sách
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        ~10%
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        ~15-25%
-                      </td>
-                      <td className="py-3 px-4 text-center text-red-600 font-semibold">
-                        +50-150%
-                      </td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-3 px-4 text-gray-700">
-                        Quân số thường trực
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        ~500,000
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        ~1,200,000
-                      </td>
-                      <td className="py-3 px-4 text-center text-red-600 font-semibold">
-                        +140%
-                      </td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-3 px-4 text-gray-700">
-                        Viện trợ nước ngoài
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        Đa dạng
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        ~80-90% từ Liên Xô
-                      </td>
-                      <td className="py-3 px-4 text-center text-red-600 font-semibold">
-                        Giảm mạnh
-                      </td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-3 px-4 text-gray-700">
-                        Tăng trưởng GDP
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        ~4-6%
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        1-3% trung bình
-                      </td>
-                      <td className="py-3 px-4 text-center text-red-600 font-semibold">
-                        Giảm ~50-60%
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="space-y-4">
+                <div className="bg-red-50 rounded-lg p-4 border-l-4 border-red-600">
+                  <h3 className="font-semibold text-gray-900 mb-2">
+                    Gánh nặng Quân sự
+                  </h3>
+                  <p className="text-gray-700 text-sm">
+                    Chi tiêu quốc phòng tăng đáng kể, huy động hàng trăm ngàn thanh
+                    niên vào quân ngũ, làm giảm lực lượng lao động sản xuất.
+                  </p>
+                </div>
+                <div className="bg-orange-50 rounded-lg p-4 border-l-4 border-orange-600">
+                  <h3 className="font-semibold text-gray-900 mb-2">
+                    Cô lập Quốc tế
+                  </h3>
+                  <p className="text-gray-700 text-sm">
+                    Viện trợ từ phương Tây và Nhật Bản bị đình chỉ (1979). Việt Nam
+                    phụ thuộc 80-90% vào viện trợ từ Liên Xô.
+                  </p>
+                </div>
+                <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-600">
+                  <h3 className="font-semibold text-gray-900 mb-2">
+                    Suy giảm Kinh tế
+                  </h3>
+                  <p className="text-gray-700 text-sm">
+                    Tăng trưởng kinh tế chậm lại, giai đoạn 1979-1985 trung bình chỉ
+                    khoảng 1-3%/năm, thấp hơn nhiều so với giai đoạn trước đó.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -489,8 +405,8 @@ export default function ChienTranhBienGioi() {
                     <p className="text-gray-700">
                       Quân đội Việt Nam tiến vào Campuchia (25/12/1978), lật đổ
                       chế độ Khmer Đỏ (Phnom Penh 7/1/1979). Bắt đầu giai đoạn
-                      đóng quân 150,000-200,000 binh sĩ tại Campuchia (peak
-                      ~200,000) kéo dài 10 năm.
+                      đóng quân tại Campuchia với lực lượng lớn (peak ~200,000 binh sĩ)
+                      kéo dài 10 năm.
                     </p>
                   </div>
                 </div>
@@ -507,9 +423,8 @@ export default function ChienTranhBienGioi() {
                     </h3>
                     <p className="text-gray-700">
                       Trung Quốc mở cuộc tấn công quy mô lớn vào biên giới phía
-                      Bắc Việt Nam (17/2-16/3/1979). Khoảng 200,000 quân Trung
-                      Quốc đối đầu với 70,000-100,000 quân chính quy Việt Nam +
-                      ~150,000 dân quân. Xung đột gây thiệt hại nặng nề cho cả
+                      Bắc Việt Nam (17/2-16/3/1979). Xung đột kéo dài gần một tháng
+                      với quy mô lớn, gây thiệt hại nặng nề về người và của cho cả
                       hai bên.
                     </p>
                   </div>
@@ -527,9 +442,9 @@ export default function ChienTranhBienGioi() {
                     </h3>
                     <p className="text-gray-700">
                       Các cuộc đụng độ và pháo kích liên tục diễn ra trên biên
-                      giới Việt-Trung (~3,750 sự kiện 1979-1982). Đặc biệt trận
-                      Vị Xuyên (1984-1988) với ~4,000 binh sĩ Việt Nam tử vong.
-                      Việt Nam phải duy trì lực lượng lớn tại cả hai mặt trận.
+                      giới Việt-Trung trong suốt thập kỷ 1980s. Căng thẳng kéo dài
+                      buộc Việt Nam phải duy trì lực lượng phòng thủ lớn tại cả hai
+                      mặt trận, gây gánh nặng kinh tế nghiêm trọng.
                     </p>
                   </div>
                 </div>
@@ -545,11 +460,10 @@ export default function ChienTranhBienGioi() {
                       Cấm vận Quốc tế
                     </h3>
                     <p className="text-gray-700">
-                      Phương Tây và ASEAN áp đặt cấm vận kinh tế toàn diện (UNGA
-                      Resolution S/13027, 1979). Nhật Bản và Thụy Điển đình chỉ
-                      viện trợ 1979. Việt Nam bị cô lập ngoại giao, phụ thuộc
-                      ~80-90% vào viện trợ từ Liên Xô (~$3 tỷ/năm cho quân sự và
-                      kinh tế).
+                      Phương Tây và ASEAN áp đặt cấm vận kinh tế toàn diện. Nhật Bản
+                      và Thụy Điển đình chỉ viện trợ 1979. Việt Nam bị cô lập ngoại
+                      giao, phụ thuộc 80-90% vào viện trợ từ Liên Xô cho cả quân sự
+                      và kinh tế.
                     </p>
                   </div>
                 </div>
@@ -565,10 +479,10 @@ export default function ChienTranhBienGioi() {
                       Rút quân khỏi Campuchia
                     </h3>
                     <p className="text-gray-700">
-                      Việt Nam hoàn tất việc rút quân khỏi Campuchia
-                      (21-26/9/1989, đợt cuối ~26,000 binh sĩ), kết thúc 10 năm
-                      đóng quân. Bước đầu cải thiện quan hệ quốc tế sau Đổi Mới,
-                      mở đường cho bình thường hóa với Trung Quốc và phương Tây.
+                      Việt Nam hoàn tất việc rút quân khỏi Campuchia vào tháng 9/1989,
+                      kết thúc 10 năm đóng quân. Bước đầu cải thiện quan hệ quốc tế
+                      sau Đổi Mới, mở đường cho bình thường hóa với Trung Quốc và
+                      phương Tây.
                     </p>
                   </div>
                 </div>
@@ -672,8 +586,8 @@ export default function ChienTranhBienGioi() {
                       </h4>
                       <p className="text-xs text-gray-600 mb-2">
                         <strong>Nội dung:</strong> Xung đột 1977-1978, lật đổ
-                        Pol Pot. Quân số 150k-200k, luân phiên ~500k. Thương
-                        vong ~15,000.
+                        Pol Pot. Việt Nam duy trì lực lượng lớn tại Campuchia
+                        (peak ~200,000), gây thiệt hại về người đáng kể.
                       </p>
                       <a
                         href="https://en.wikipedia.org/wiki/Cambodian–Vietnamese_War"
@@ -691,9 +605,9 @@ export default function ChienTranhBienGioi() {
                         Wikipedia. (n.d.). <em>Sino-Vietnamese War</em>
                       </h4>
                       <p className="text-xs text-gray-600 mb-2">
-                        <strong>Nội dung:</strong> 17/2-16/3/1979: 200k quân TQ
-                        vs 70k-100k VN + 150k dân quân. Thương vong 20k-35k mỗi
-                        bên.
+                        <strong>Nội dung:</strong> Chiến tranh biên giới Việt-Trung
+                        17/2-16/3/1979, xung đột quy mô lớn gây thiệt hại nặng nề cho
+                        cả hai bên.
                       </p>
                       <a
                         href="https://en.wikipedia.org/wiki/Sino-Vietnamese_War"
@@ -712,8 +626,8 @@ export default function ChienTranhBienGioi() {
                         <em>Sino-Vietnamese conflicts (1979-1991)</em>
                       </h4>
                       <p className="text-xs text-gray-600 mb-2">
-                        <strong>Nội dung:</strong> ~3,750 vụ xung đột 1979-1982.
-                        Trận Vị Xuyên: 4,000 VN tử vong, 9,000 bị thương.
+                        <strong>Nội dung:</strong> Xung đột biên giới liên tục
+                        1979-1991 với nhiều trận đánh, gây thiệt hại về người đáng kể.
                       </p>
                       <a
                         href="https://en.wikipedia.org/wiki/Sino-Vietnamese_conflicts_(1979–1991)"
@@ -750,81 +664,27 @@ export default function ChienTranhBienGioi() {
 
                     <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
                       <h4 className="font-semibold text-gray-900 mb-2">
-                        GlobalSecurity.org. (n.d.).{" "}
-                        <em>Cambodia - Vietnamese Occupation 1979-1989</em>
+                        Forsberg, L. T. (2007).{" "}
+                        <em>
+                          Economic reforms in Vietnam: Transition or reconstruction
+                        </em>
                       </h4>
+                      <p className="text-sm text-gray-700 mb-2">
+                        Stockholm School of Economics.
+                      </p>
                       <p className="text-xs text-gray-600 mb-2">
-                        <strong>Nội dung:</strong> Duy trì 180,000 quân, cao
-                        điểm 200,000. Tổng luân phiên ~500,000.
+                        <strong>Nội dung:</strong> Phân tích sự phụ thuộc nặng nề
+                        vào viện trợ Liên Xô (70% kim ngạch ngoại thương), và sự gián
+                        đoạn viện trợ từ phương Tây, Nhật Bản sau vấn đề Campuchia.
                       </p>
                       <a
-                        href="https://www.globalsecurity.org/military/world/cambodia/history-vietnam.htm"
+                        href="https://swopec.hhs.se/eijswp/abs/eijswp0226.htm"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        GlobalSecurity.org
-                      </a>
-                    </div>
-
-                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-2">
-                        World Bank. (n.d.).{" "}
-                        <em>Military expenditure (% of GDP) - Vietnam</em>
-                      </h4>
-                      <p className="text-xs text-gray-600 mb-2">
-                        <strong>Nội dung:</strong> Chi tiêu quốc phòng ~20% GDP
-                        (1979-1985).
-                      </p>
-                      <a
-                        href="https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS?locations=VN"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Xem dữ liệu
-                      </a>
-                    </div>
-
-                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-2">
-                        Alpha History. (n.d.).{" "}
-                        <em>Vietnam War timeline: Cambodia</em>
-                      </h4>
-                      <p className="text-xs text-gray-600 mb-2">
-                        <strong>Nội dung:</strong> 25/12/1978: 150,000 quân xâm
-                        lược. 07/01/1979: Giải phóng Phnom Penh.
-                      </p>
-                      <a
-                        href="https://alphahistory.com/vietnamwar/vietnam-war-timeline-cambodia/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Alpha History
-                      </a>
-                    </div>
-
-                    <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
-                      <h4 className="font-semibold text-gray-900 mb-2">
-                        Russia Beyond. (2016).{" "}
-                        <em>How Russian aid helped rebuild post-war Vietnam</em>
-                      </h4>
-                      <p className="text-xs text-gray-600 mb-2">
-                        <strong>Nội dung:</strong> 80-90% phụ thuộc viện trợ
-                        Liên Xô, ~1-3 tỷ USD/năm (1979-1985).
-                      </p>
-                      <a
-                        href="https://www.rbth.com/multimedia/history/2016/03/16/how-russian-aid-helped-rebuild-post-war-vietnam_575851"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Russia Beyond
+                        SWOPEC
                       </a>
                     </div>
 
@@ -946,7 +806,7 @@ export default function ChienTranhBienGioi() {
                     CQ8.1 - Đỉnh cao Khủng hoảng
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-600 transition">
-                    Cải cách Giá-Lương-Tiền (9/1985)
+                    Cải cách Giá-Lương-Tiền (1985)
                   </h3>
                   <p className="text-sm text-gray-600">
                     "Cú sốc" thất bại và lạm phát 774.7% - con đường đến Đổi Mới
