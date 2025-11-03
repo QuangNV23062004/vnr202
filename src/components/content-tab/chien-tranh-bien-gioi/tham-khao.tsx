@@ -5,6 +5,11 @@ export default function ThamKhao() {
   return (
     <div className="space-y-8">
       <div className="bg-white rounded-lg shadow-md p-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+          <FileText className="w-7 h-7 text-red-600" />
+          Tài liệu Tham khảo
+        </h2>
+
         <div className="space-y-6">
           {/* Vietnamese Sources */}
           <div>
@@ -72,7 +77,8 @@ export default function ThamKhao() {
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
                   <strong>Nội dung:</strong> Xung đột 1977-1978, lật đổ Pol Pot.
-                  Quân số 150k-200k, luân phiên ~500k. Thương vong ~15,000.
+                  Việt Nam duy trì lực lượng lớn tại Campuchia (peak ~200,000),
+                  gây thiệt hại về người đáng kể.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/Cambodian–Vietnamese_War"
@@ -90,8 +96,9 @@ export default function ThamKhao() {
                   Wikipedia. (n.d.). <em>Sino-Vietnamese War</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> 17/2-16/3/1979: 200k quân TQ vs
-                  70k-100k VN + 150k dân quân. Thương vong 20k-35k mỗi bên.
+                  <strong>Nội dung:</strong> Chiến tranh biên giới Việt-Trung
+                  17/2-16/3/1979, xung đột quy mô lớn gây thiệt hại nặng nề cho
+                  cả hai bên.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/Sino-Vietnamese_War"
@@ -110,8 +117,8 @@ export default function ThamKhao() {
                   <em>Sino-Vietnamese conflicts (1979-1991)</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> ~3,750 vụ xung đột 1979-1982. Trận
-                  Vị Xuyên: 4,000 VN tử vong, 9,000 bị thương.
+                  <strong>Nội dung:</strong> Xung đột biên giới liên tục
+                  1979-1991 với nhiều trận đánh, gây thiệt hại về người đáng kể.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/Sino-Vietnamese_conflicts_(1979–1991)"
@@ -146,80 +153,27 @@ export default function ThamKhao() {
 
               <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">
-                  GlobalSecurity.org. (n.d.).{" "}
-                  <em>Cambodia - Vietnamese Occupation 1979-1989</em>
+                  Forsberg, L. T. (2007).{" "}
+                  <em>
+                    Economic reforms in Vietnam: Transition or reconstruction
+                  </em>
                 </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  Stockholm School of Economics.
+                </p>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Duy trì 180,000 quân, cao điểm
-                  200,000. Tổng luân phiên ~500,000.
+                  <strong>Nội dung:</strong> Phân tích sự phụ thuộc nặng nề vào
+                  viện trợ Liên Xô (70% kim ngạch ngoại thương), và sự gián đoạn
+                  viện trợ từ phương Tây, Nhật Bản sau vấn đề Campuchia.
                 </p>
                 <a
-                  href="https://www.globalsecurity.org/military/world/cambodia/history-vietnam.htm"
+                  href="https://swopec.hhs.se/eijswp/abs/eijswp0226.htm"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  GlobalSecurity.org
-                </a>
-              </div>
-
-              <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  World Bank. (n.d.).{" "}
-                  <em>Military expenditure (% of GDP) - Vietnam</em>
-                </h4>
-                <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Chi tiêu quốc phòng ~20% GDP
-                  (1979-1985).
-                </p>
-                <a
-                  href="https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS?locations=VN"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Xem dữ liệu
-                </a>
-              </div>
-
-              <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  Alpha History. (n.d.). <em>Vietnam War timeline: Cambodia</em>
-                </h4>
-                <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> 25/12/1978: 150,000 quân xâm lược.
-                  07/01/1979: Giải phóng Phnom Penh.
-                </p>
-                <a
-                  href="https://alphahistory.com/vietnamwar/vietnam-war-timeline-cambodia/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Alpha History
-                </a>
-              </div>
-
-              <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  Russia Beyond. (2016).{" "}
-                  <em>How Russian aid helped rebuild post-war Vietnam</em>
-                </h4>
-                <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> 80-90% phụ thuộc viện trợ Liên Xô,
-                  ~1-3 tỷ USD/năm (1979-1985).
-                </p>
-                <a
-                  href="https://www.rbth.com/multimedia/history/2016/03/16/how-russian-aid-helped-rebuild-post-war-vietnam_575851"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Russia Beyond
+                  SWOPEC
                 </a>
               </div>
 

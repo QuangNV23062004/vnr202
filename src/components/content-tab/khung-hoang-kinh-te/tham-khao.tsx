@@ -5,6 +5,11 @@ export default function ThamKhao() {
   return (
     <div className="space-y-8">
       <div className="bg-white rounded-lg shadow-md p-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+          <FileText className="w-7 h-7 text-amber-600" />
+          Tài liệu Tham khảo Chính thức
+        </h2>
+
         <div className="space-y-6">
           {/* Vietnamese Sources */}
           <div>
@@ -194,7 +199,7 @@ export default function ThamKhao() {
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
                   <strong>Nội dung:</strong> Hợp tác hóa cưỡng bức, năng suất
-                  giảm 7% cuối 1970s. Năng suất lao động giảm, thiếu ăn.
+                  giảm mạnh cuối 1970s. Năng suất lao động giảm, thiếu ăn.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/Agriculture_in_vietnam"
@@ -209,21 +214,52 @@ export default function ThamKhao() {
 
               <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">
-                  World Bank. (n.d.).{" "}
-                  <em>Military expenditure (% of GDP) - Vietnam</em>
+                  Forsberg, L. T. (2007).{" "}
+                  <em>
+                    Economic reforms in Vietnam: Transition or reconstruction
+                  </em>
                 </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  Stockholm School of Economics.
+                </p>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Dữ liệu lịch sử chi tiêu quốc phòng
-                  ~20% GDP (điều chỉnh 1976-1985).
+                  <strong>Nội dung:</strong> Phân tích sự phụ thuộc nặng nề vào
+                  viện trợ Liên Xô (70% kim ngạch ngoại thương trong thập niên
+                  1980), và sự gián đoạn viện trợ từ phương Tây, Nhật Bản sau
+                  vấn đề Campuchia.
                 </p>
                 <a
-                  href="https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS?locations=VN"
+                  href="https://swopec.hhs.se/eijswp/abs/eijswp0226.htm"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Xem dữ liệu
+                  SWOPEC (Stockholm Working Papers)
+                </a>
+              </div>
+
+              <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  Vietnam Law Magazine. (n.d.).{" "}
+                  <em>
+                    Vietnam secures remarkable economic successes since national
+                    reunification
+                  </em>
+                </h4>
+                <p className="text-xs text-gray-600 mb-2">
+                  <strong>Nội dung:</strong> Viện trợ và các khoản vay nước
+                  ngoài chiếm hơn 63% ngân sách. Viện trợ từ các nước xã hội chủ
+                  nghĩa giảm mạnh.
+                </p>
+                <a
+                  href="https://vietnamlawmagazine.vn/vietnam-secures-remarkable-economic-successes-since-national-reunification-7476.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Vietnam Law Magazine
                 </a>
               </div>
 
@@ -254,8 +290,8 @@ export default function ThamKhao() {
                 <h4 className="font-semibold text-gray-900 mb-2">
                   Malesky, E., & London, J. (2014).{" "}
                   <em>
-                    "No Responsibility and No Rice": The Rise and Fall of
-                    Agricultural Collectivization in Vietnam
+                    &quot;No Responsibility and No Rice&quot;: The Rise and Fall
+                    of Agricultural Collectivization in Vietnam
                   </em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
@@ -298,8 +334,8 @@ export default function ThamKhao() {
                   <em>Government Eliminates Subsidies in Economic Reform</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Cải cách 1985 xóa trợ cấp gây "cú
-                  sốc", quan liêu, lãng phí, đời sống khó khăn.
+                  <strong>Nội dung:</strong> Cải cách 1985 xóa trợ cấp gây
+                  &quot;cú sốc&quot;, quan liêu, lãng phí, đời sống khó khăn.
                 </p>
                 <a
                   href="https://www.latimes.com/archives/la-xpm-1985-09-30-fi-17632-story.html"

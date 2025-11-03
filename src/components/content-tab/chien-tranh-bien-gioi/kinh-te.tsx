@@ -13,69 +13,35 @@ export default function KinhTe() {
         {/* Budget Allocation */}
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
-            Phân bổ Ngân sách Nhà nước (1980-1985)
+            Gánh nặng Ngân sách trong thập kỷ 1980s
           </h3>
-          <div className="space-y-4">
-            <div>
-              <div className="flex justify-between mb-2">
-                <span className="text-gray-700 font-medium">
-                  Quốc phòng & An ninh
+          <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <p className="text-gray-700 mb-4">
+              Chi tiêu quốc phòng chiếm tỷ trọng lớn trong ngân sách nhà nước do
+              phải duy trì lực lượng quân đội đông đảo trên hai mặt trận:
+            </p>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex gap-2">
+                <span className="text-red-600">•</span>
+                <span>
+                  <strong>Biên giới Tây Nam:</strong>peak ~200,000
                 </span>
-                <span className="text-red-600 font-bold">~15-25%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-6">
-                <div
-                  className="bg-red-600 h-6 rounded-full"
-                  style={{ width: "25%" }}
-                ></div>
-              </div>
-              <p className="text-xs text-gray-500 mt-1">
-                Tương đương ~20% GDP (theo SIPRI)
-              </p>
-            </div>
-
-            <div>
-              <div className="flex justify-between mb-2">
-                <span className="text-gray-700 font-medium">
-                  Kinh tế & Đầu tư
+              </li>
+              <li className="flex gap-2">
+                <span className="text-orange-600">•</span>
+                <span>
+                  <strong>Biên giới Phía Bắc:</strong> Lực lượng phòng thủ lớn
+                  đối phó căng thẳng với Trung Quốc
                 </span>
-                <span className="text-blue-600 font-bold">~30%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-6">
-                <div
-                  className="bg-blue-600 h-6 rounded-full"
-                  style={{ width: "30%" }}
-                ></div>
-              </div>
-            </div>
-
-            <div>
-              <div className="flex justify-between mb-2">
-                <span className="text-gray-700 font-medium">
-                  Giáo dục & Y tế
+              </li>
+              <li className="flex gap-2">
+                <span className="text-amber-600">•</span>
+                <span>
+                  <strong>Hậu cần & Vũ khí:</strong> Chi phí khổng lồ cho trang
+                  bị, đạn dược, hậu cần
                 </span>
-                <span className="text-green-600 font-bold">~15%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-6">
-                <div
-                  className="bg-green-600 h-6 rounded-full"
-                  style={{ width: "15%" }}
-                ></div>
-              </div>
-            </div>
-
-            <div>
-              <div className="flex justify-between mb-2">
-                <span className="text-gray-700 font-medium">Khác</span>
-                <span className="text-gray-600 font-bold">~10%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-6">
-                <div
-                  className="bg-gray-500 h-6 rounded-full"
-                  style={{ width: "10%" }}
-                ></div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -118,74 +84,37 @@ export default function KinhTe() {
         </div>
       </div>
 
-      {/* Comparison Table */}
+      {/* Impact Overview */}
       <div className="bg-white rounded-lg shadow-md p-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          So sánh Giai đoạn trước và sau Chiến tranh
+          Tác động Kinh tế của Chiến tranh Biên giới
         </h2>
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="border-b-2 border-gray-300">
-                <th className="text-left py-3 px-4 text-gray-900 font-semibold">
-                  Chỉ tiêu
-                </th>
-                <th className="text-center py-3 px-4 text-gray-900 font-semibold">
-                  1976-1978
-                </th>
-                <th className="text-center py-3 px-4 text-gray-900 font-semibold">
-                  1979-1985
-                </th>
-                <th className="text-center py-3 px-4 text-gray-900 font-semibold">
-                  Biến động
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 px-4 text-gray-700">
-                  Chi quốc phòng / Ngân sách
-                </td>
-                <td className="py-3 px-4 text-center text-gray-700">~10%</td>
-                <td className="py-3 px-4 text-center text-gray-700">~15-25%</td>
-                <td className="py-3 px-4 text-center text-red-600 font-semibold">
-                  +50-150%
-                </td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 px-4 text-gray-700">Quân số thường trực</td>
-                <td className="py-3 px-4 text-center text-gray-700">
-                  ~500,000
-                </td>
-                <td className="py-3 px-4 text-center text-gray-700">
-                  ~1,200,000
-                </td>
-                <td className="py-3 px-4 text-center text-red-600 font-semibold">
-                  +140%
-                </td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 px-4 text-gray-700">Viện trợ nước ngoài</td>
-                <td className="py-3 px-4 text-center text-gray-700">Đa dạng</td>
-                <td className="py-3 px-4 text-center text-gray-700">
-                  ~80-90% từ Liên Xô
-                </td>
-                <td className="py-3 px-4 text-center text-red-600 font-semibold">
-                  Giảm mạnh
-                </td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 px-4 text-gray-700">Tăng trưởng GDP</td>
-                <td className="py-3 px-4 text-center text-gray-700">~4-6%</td>
-                <td className="py-3 px-4 text-center text-gray-700">
-                  1-3% trung bình
-                </td>
-                <td className="py-3 px-4 text-center text-red-600 font-semibold">
-                  Giảm ~50-60%
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="space-y-4">
+          <div className="bg-red-50 rounded-lg p-4 border-l-4 border-red-600">
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Gánh nặng Quân sự
+            </h3>
+            <p className="text-gray-700 text-sm">
+              Chi tiêu quốc phòng tăng đáng kể, huy động hàng trăm ngàn thanh
+              niên vào quân ngũ, làm giảm lực lượng lao động sản xuất.
+            </p>
+          </div>
+          <div className="bg-orange-50 rounded-lg p-4 border-l-4 border-orange-600">
+            <h3 className="font-semibold text-gray-900 mb-2">Cô lập Quốc tế</h3>
+            <p className="text-gray-700 text-sm">
+              Viện trợ từ phương Tây và Nhật Bản bị đình chỉ (1979). Việt Nam
+              phụ thuộc 80-90% vào viện trợ từ Liên Xô.
+            </p>
+          </div>
+          <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-600">
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Suy giảm Kinh tế
+            </h3>
+            <p className="text-gray-700 text-sm">
+              Tăng trưởng kinh tế chậm lại, giai đoạn 1979-1985 trung bình chỉ
+              khoảng 1-3%/năm, thấp hơn nhiều so với giai đoạn trước đó.
+            </p>
+          </div>
         </div>
       </div>
     </div>

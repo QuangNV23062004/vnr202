@@ -16,25 +16,25 @@ const causes = [
     title: "2. Chiến tranh Biên giới",
     color: "orange",
     items: [
-      "Đóng quân 200,000 binh sĩ tại Campuchia (1978–1989)",
+      "Duy trì lực lượng quân đội tại Campuchia..",
       "Xung đột biên giới với Trung Quốc (1979–1989)",
-      "Chi tiêu quốc phòng chiếm ~15–25% ngân sách nhà nước",
+      "Gánh nặng quốc phòng khổng lồ...",
     ],
   },
   {
     title: "3. Cô lập Quốc tế",
     color: "blue",
     items: [
-      "Cấm vận kinh tế từ phương Tây do vấn đề Campuchia",
-      "Mất nguồn viện trợ và đầu tư nước ngoài",
-      "Viện trợ từ Liên Xô chiếm ~60–65% tổng viện trợ song phương",
+      "Thương mại với Liên Xô chiếm khoảng 70%...",
+      "Viện trợ chiếm hơn 63% ngân sách...",
+      "rung Quốc ngừng hỗ trợ từ 3/7/1978",
     ],
   },
   {
     title: "4. Thiên tai & Điều kiện Tự nhiên",
     color: "green",
     items: [
-      "Hạn hán, lũ lụt thường xuyên làm mất mùa (1977, 1978, 1984, 1985)",
+      "Hạn hán, lũ lụt thường xuyên làm mất mùa trong thập kỷ 1970s",
       "Thiếu công nghệ và thiết bị hiện đại để chống chọi thiên tai",
     ],
   },

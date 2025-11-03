@@ -23,9 +23,8 @@ export default function MocThoiGian() {
               </h3>
               <p className="text-gray-700">
                 Quân đội Việt Nam tiến vào Campuchia (25/12/1978), lật đổ chế độ
-                Khmer Đỏ (Phnom Penh 7/1/1979). Bắt đầu giai đoạn đóng quân
-                150,000-200,000 binh sĩ tại Campuchia (peak ~200,000) kéo dài 10
-                năm.
+                Khmer Đỏ (Phnom Penh 7/1/1979). Bắt đầu giai đoạn đóng quân binh
+                sĩ tại Campuchia (peak ~200,000) kéo dài 10 năm.
               </p>
             </div>
           </div>
@@ -42,9 +41,9 @@ export default function MocThoiGian() {
               </h3>
               <p className="text-gray-700">
                 Trung Quốc mở cuộc tấn công quy mô lớn vào biên giới phía Bắc
-                Việt Nam (17/2-16/3/1979). Khoảng 200,000 quân Trung Quốc đối
-                đầu với 70,000-100,000 quân chính quy Việt Nam + ~150,000 dân
-                quân. Xung đột gây thiệt hại nặng nề cho cả hai bên.
+                Việt Nam (17/2-16/3/1979). Xung đột kéo dài gần một tháng với
+                quy mô lớn, gây thiệt hại nặng nề về người và của cho cả hai
+                bên.
               </p>
             </div>
           </div>
@@ -61,9 +60,9 @@ export default function MocThoiGian() {
               </h3>
               <p className="text-gray-700">
                 Các cuộc đụng độ và pháo kích liên tục diễn ra trên biên giới
-                Việt-Trung (~3,750 sự kiện 1979-1982). Đặc biệt trận Vị Xuyên
-                (1984-1988) với ~4,000 binh sĩ Việt Nam tử vong. Việt Nam phải
-                duy trì lực lượng lớn tại cả hai mặt trận.
+                Việt-Trung trong suốt thập kỷ 1980s. Căng thẳng kéo dài buộc
+                Việt Nam phải duy trì lực lượng phòng thủ lớn tại cả hai mặt
+                trận, gây gánh nặng kinh tế nghiêm trọng.
               </p>
             </div>
           </div>
@@ -82,7 +81,7 @@ export default function MocThoiGian() {
                 Phương Tây và ASEAN áp đặt cấm vận kinh tế toàn diện (UNGA
                 Resolution S/13027, 1979). Nhật Bản và Thụy Điển đình chỉ viện
                 trợ 1979. Việt Nam bị cô lập ngoại giao, phụ thuộc ~80-90% vào
-                viện trợ từ Liên Xô (~$3 tỷ/năm cho quân sự và kinh tế).
+                viện trợ từ Liên Xô.
               </p>
             </div>
           </div>
@@ -98,10 +97,10 @@ export default function MocThoiGian() {
                 Rút quân khỏi Campuchia
               </h3>
               <p className="text-gray-700">
-                Việt Nam hoàn tất việc rút quân khỏi Campuchia (21-26/9/1989,
-                đợt cuối ~26,000 binh sĩ), kết thúc 10 năm đóng quân. Bước đầu
-                cải thiện quan hệ quốc tế sau Đổi Mới, mở đường cho bình thường
-                hóa với Trung Quốc và phương Tây.
+                Việt Nam hoàn tất việc rút quân khỏi Campuchia vào tháng 9/1989,
+                kết thúc 10 năm đóng quân. Bước đầu cải thiện quan hệ quốc tế
+                sau Đổi Mới, mở đường cho bình thường hóa với Trung Quốc và
+                phương Tây.
               </p>
             </div>
           </div>

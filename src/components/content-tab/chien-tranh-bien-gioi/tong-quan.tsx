@@ -13,15 +13,15 @@ export default function TongQuan() {
         </div>
         <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-orange-600">
           <Users className="w-8 h-8 text-orange-600 mb-3" />
-          <h3 className="text-3xl font-bold text-gray-900 mb-1">~500,000</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-1">~200,000</h3>
           <p className="text-gray-600 text-sm">
-            Quân số điều động (peak 1980s)
+            Quân số tại Campuchia (peak 1980s)
           </p>
         </div>
         <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-amber-600">
           <TrendingDown className="w-8 h-8 text-amber-600 mb-3" />
-          <h3 className="text-3xl font-bold text-gray-900 mb-1">15-25%</h3>
-          <p className="text-gray-600 text-sm">Ngân sách (~20% GDP)</p>
+          <h3 className="text-3xl font-bold text-gray-900 mb-1">80-90%</h3>
+          <p className="text-gray-600 text-sm">Phụ thuộc viện trợ Liên Xô</p>
         </div>
       </div>
 
@@ -115,13 +115,11 @@ export default function TongQuan() {
             </h3>
             <ul className="space-y-2 text-gray-700 text-sm">
               <li>
-                • Chi tiêu quốc phòng chiếm ~15-25% ngân sách nhà nước (~20%
-                GDP)
+                • Chi tiêu quốc phòng chiếm tỷ trọng lớn trong ngân sách nhà
+                nước
               </li>
-              <li>
-                • Huy động ~500,000 thanh niên vào quân đội (bao gồm luân phiên)
-              </li>
-              <li>• Giảm ~10-15% lực lượng lao động sản xuất</li>
+              <li>• Huy động hàng trăm ngàn thanh niên</li>
+              <li>• Giảm đáng kể lực lượng lao động sản xuất</li>
               <li>• Chi phí vũ khí, trang bị, hậu cần khổng lồ</li>
             </ul>
           </div>

@@ -91,8 +91,8 @@ export default function ChuQuan() {
         <p className="text-gray-700 text-sm leading-relaxed mb-3">
           <strong className="text-red-600">Tư duy giáo điều, chủ quan</strong>{" "}
           là <strong>nguyên nhân gốc rễ</strong> của khủng hoảng. Đây chính là
-          <strong className="text-red-600"> "tư duy cũ"</strong> mà sau này Đảng
-          phải trả giá đắt.
+          <strong className="text-red-600"> &quot;tư duy cũ&quot;</strong> mà
+          sau này Đảng phải trả giá đắt.
         </p>
         <p className="text-gray-700 text-sm leading-relaxed">
           Nếu không có những sai lầm chủ quan này, các khó khăn khách quan có

@@ -173,10 +173,11 @@ export default function ChienTranhBienGioi() {
                     CQ8.1 - Đỉnh cao Khủng hoảng
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-600 transition">
-                    Cải cách Giá-Lương-Tiền (9/1985)
+                    Cải cách Giá-Lương-Tiền (1985)
                   </h3>
                   <p className="text-sm text-gray-600">
-                    "Cú sốc" thất bại và lạm phát 774.7% - con đường đến Đổi Mới
+                    &quot;Cú sốc&quot; thất bại và lạm phát 774.7% - con đường
+                    đến Đổi Mới
                   </p>
                 </div>
                 <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-red-600 transition ml-4 shrink-0" />
