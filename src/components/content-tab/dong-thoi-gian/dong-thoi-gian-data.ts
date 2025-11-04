@@ -10,16 +10,6 @@ export const timelineEvents = [
     borderColor: "border-primary/50",
   },
   {
-    year: 1975,
-    month: "12",
-    title: "Đại Hội IV của Đảng",
-    description:
-      "Đánh dấu bước chuyển từ kháng chiến sang xây dựng. Lựa chọn tập trung vào kinh tế kế hoạch hóa bao cấp.",
-    color: "text-accent",
-    bgColor: "bg-accent/20",
-    borderColor: "border-accent/50",
-  },
-  {
     year: 1976,
     month: "07",
     title: "Chính Thức Thống Nhất Về Hành Chính",
@@ -29,6 +19,17 @@ export const timelineEvents = [
     bgColor: "bg-primary/20",
     borderColor: "border-primary/50",
   },
+  {
+    year: 1976,
+    month: "12",
+    title: "Đại Hội IV của Đảng",
+    description:
+      "Đánh dấu bước chuyển từ kháng chiến sang xây dựng. Lựa chọn tập trung vào kinh tế kế hoạch hóa bao cấp.",
+    color: "text-accent",
+    bgColor: "bg-accent/20",
+    borderColor: "border-accent/50",
+  },
+
   {
     year: 1978,
     month: "12-25",
