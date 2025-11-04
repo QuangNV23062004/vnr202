@@ -13,26 +13,34 @@ export default function HomepageWrapper() {
       <Header></Header>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/10 opacity-30"></div>
+      <section className="relative py-24 px-4 overflow-hidden min-h-[85vh] flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src="https://c.files.bbci.co.uk/1742D/production/_103377259_05-totichstreet.jpg"
+            alt="Background"
+            className="w-full h-full object-cover"
+            style={{ filter: "brightness(0.6) contrast(1.1)" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/50 to-black/70"></div>
+        </div>
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="text-sm uppercase tracking-widest text-accent mb-4">
+          <div className="text-sm uppercase tracking-widest text-red-500 font-medium mb-4">
             Lịch Sử Việt Nam
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
             Đêm Trước Đổi Mới
           </h1>
-          <p className="text-xl text-muted-foreground mb-4">
+          <p className="text-xl text-white/90 font-medium mb-4">
             Khủng hoảng kinh tế, xã hội và thử nghiệm (1975 – 1986)
           </p>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-12">
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-12 leading-relaxed">
             10 năm sau thống nhất, Việt Nam rơi vào khủng hoảng toàn diện. Bài
             trình bày này phân tích các nguyên nhân khách quan, chủ quan, và con
             đường dẫn tới Đổi Mới năm 1986.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button
-              className=" flex flex-row rounded-md bg-primary hover:bg-primary/90 text-primary-foreground gap-2 px-6 py-3 text-lg"
+              className="flex flex-row rounded-md bg-red-600 hover:bg-red-700 text-white gap-2 px-8 py-4 text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
               onClick={() => {
                 const el = document.getElementById("key-questions");
                 if (el) {
