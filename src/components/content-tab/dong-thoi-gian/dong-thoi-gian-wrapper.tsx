@@ -13,25 +13,33 @@ export default function DongThoiGian() {
       <Header></Header>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/10 opacity-30"></div>
+      <section className="relative py-20 px-4 overflow-hidden min-h-[70vh] flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src="https://cdnphoto.dantri.com.vn/xnAF_B743goxlVNqdp-3kanf6Mk=/zoom/1200_630/2022/01/14/nhung-ky-uc-hanh-phuc-don-so-thoi-bao-cap-crop-1642125377352.jpeg"
+            alt="Background"
+            className="w-full h-full object-cover"
+            style={{ filter: "brightness(0.6) contrast(1.1)" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/50 to-black/70"></div>
+        </div>
         <div className="max-w-5xl mx-auto relative z-10">
           <button
             onClick={() => {
               updateTabAddress(activeTabId, "vnr202-nhom5.com");
             }}
-            className="inline-flex gap-2 items-center text-muted-foreground hover:text-primary transition mb-8"
+            className="inline-flex gap-2 items-center text-gray-300 hover:text-red-500 transition-colors duration-300 mb-8"
           >
             <ChevronLeft className="w-5 h-5" />
             Quay Lại
           </button>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
             Dòng Thời Gian
           </h1>
-          <p className="text-xl text-muted-foreground mb-4">
+          <p className="text-xl text-white/90 font-medium mb-4">
             1975 - 1986: Mười Năm Khủng Hoảng
           </p>
-          <p className="text-lg text-foreground/80 max-w-3xl">
+          <p className="text-lg text-gray-200 max-w-3xl leading-relaxed">
             Theo dõi những sự kiện quan trọng, chính sách thay đổi, và cột mốc
             lịch sử dẫn tới Đổi Mới năm 1986. Mỗi sự kiện đánh dấu một bước
             ngoặt trong lịch sử Việt Nam hiện đại.
