@@ -395,6 +395,33 @@ export default function TabProvider({ children }: { children: ReactNode }) {
       });
   }, []);
 
+  React.useEffect(() => {
+    try {
+      const storedTabs = localStorage.getItem("browser-tabs");
+      const storedActiveId = localStorage.getItem("browser-active-tab");
+
+      if (storedTabs) {
+        const parsedTabs = JSON.parse(storedTabs);
+
+        if (Array.isArray(parsedTabs) && parsedTabs.length > 0) {
+          setAvailableTabs(parsedTabs);
+          setActiveTabId(storedActiveId || parsedTabs[0].id);
+        }
+      }
+    } catch (error) {
+      console.error("Failed to load tabs from localStorage:", error);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    try {
+      localStorage.setItem("browser-tabs", JSON.stringify(availableTabs));
+      localStorage.setItem("browser-active-tab", activeTabId);
+    } catch (error) {
+      console.error("Failed to save tabs to localStorage:", error);
+    }
+  }, [availableTabs, activeTabId]);
+
   // Add to context value:
   return (
     <TabContext.Provider
