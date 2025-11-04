@@ -24,7 +24,7 @@ export default function KinhTe() {
               <li className="flex gap-2">
                 <span className="text-red-600">•</span>
                 <span>
-                  <strong>Biên giới Tây Nam:</strong>peak ~200,000
+                  <strong>Biên giới Tây Nam:</strong> peak ~200,000 năm 1980, ~180,000 năm 1984
                 </span>
               </li>
               <li className="flex gap-2">
@@ -69,7 +69,15 @@ export default function KinhTe() {
               <ArrowRight className="w-6 h-6 text-red-600 shrink-0" />
               <span>
                 <strong>Cô lập quốc tế:</strong> Cấm vận từ phương Tây → không
-                có viện trợ, đầu tư nước ngoài → phụ thuộc vào Liên Xô
+                có viện trợ, đầu tư nước ngoài → phụ thuộc vào Liên Xô (viện trợ Liên Xô ~USD 1 tỷ/năm 
+                so với viện trợ phương Tây ~USD 100 triệu/năm)
+              </span>
+            </p>
+            <p className="flex gap-3">
+              <ArrowRight className="w-6 h-6 text-red-600 shrink-0" />
+              <span>
+                <strong>Phụ thuộc sản xuất:</strong> Viện trợ Liên Xô tài trợ 95% sản lượng than của Việt Nam, 
+                51% xi măng, 35% phát điện → kinh tế mất tính tự chủ hoàn toàn
               </span>
             </p>
             <p className="flex gap-3">
@@ -101,10 +109,19 @@ export default function KinhTe() {
           </div>
           <div className="bg-orange-50 rounded-lg p-4 border-l-4 border-orange-600">
             <h3 className="font-semibold text-gray-900 mb-2">Cô lập Quốc tế</h3>
-            <p className="text-gray-700 text-sm">
+            <p className="text-gray-700 text-sm mb-3">
               Viện trợ từ phương Tây và Nhật Bản bị đình chỉ (1979). Việt Nam
-              phụ thuộc 80-90% vào viện trợ từ Liên Xô.
+              phụ thuộc nặng nề vào viện trợ Liên Xô: ~75% đầu tư công, ~70% ngoại thương, 
+              ~90% nguyên liệu chính (peak giữa 1980s).
             </p>
+            <p className="text-gray-700 text-sm font-semibold">
+              Phụ thuộc sản xuất của Việt Nam:
+            </p>
+            <ul className="text-gray-700 text-xs ml-4 mt-1">
+              <li>• 95% sản lượng than của VN</li>
+              <li>• 51% sản xuất xi măng của VN</li>
+              <li>• 35% phát điện của VN</li>
+            </ul>
           </div>
           <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-600">
             <h3 className="font-semibold text-gray-900 mb-2">

@@ -27,7 +27,7 @@ const causes = [
     items: [
       "Thương mại với Liên Xô chiếm khoảng 70%...",
       "Viện trợ chiếm hơn 63% ngân sách...",
-      "rung Quốc ngừng hỗ trợ từ 3/7/1978",
+      "Trung Quốc ngừng hỗ trợ từ 3/7/1978",
     ],
   },
   {

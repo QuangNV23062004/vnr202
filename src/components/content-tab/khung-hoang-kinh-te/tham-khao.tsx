@@ -139,9 +139,7 @@ export default function ThamKhao() {
                   Wikipedia. (n.d.). <em>Economic history of Vietnam</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Chi tiết khủng hoảng 1976-1986: lạm
-                  phát, năng suất thấp, thiếu hàng hóa. Miền Bắc kế hoạch hóa vs
-                  miền Nam thị trường tự do.
+                  <strong>Nội dung:</strong> Tổng quan khủng hoảng kinh tế 1976-1986.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/Economic_history_of_Vietnam"
@@ -159,9 +157,7 @@ export default function ThamKhao() {
                   Wikipedia. (n.d.). <em>Đổi Mới</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Lạm phát {">"}700%, tăng trưởng
-                  chậm dẫn đến Đổi Mới 1986. Hậu quả bao cấp: lạm phát ẩn, chợ
-                  đen.
+                  <strong>Nội dung:</strong> Tổng quan về chính sách Đổi Mới và bối cảnh kinh tế.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/%C4%90%E1%BB%95i_M%E1%BB%9Bi"
@@ -214,13 +210,13 @@ export default function ThamKhao() {
 
               <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">
-                  Forsberg, L. T. (2007).{" "}
+                  Forsberg, L. T. & Kokko, A. (2007).{" "}
                   <em>
-                    Economic reforms in Vietnam: Transition or reconstruction
+                    The Role of Donors in Vietnamese Development Planning
                   </em>
                 </h4>
                 <p className="text-sm text-gray-700 mb-2">
-                  Stockholm School of Economics.
+                  Working Paper 238, Stockholm School of Economics.
                 </p>
                 <p className="text-xs text-gray-600 mb-2">
                   <strong>Nội dung:</strong> Phân tích sự phụ thuộc nặng nề vào
@@ -229,13 +225,13 @@ export default function ThamKhao() {
                   vấn đề Campuchia.
                 </p>
                 <a
-                  href="https://swopec.hhs.se/eijswp/abs/eijswp0226.htm"
+                  href="https://swopec.hhs.se/eijswp/papers/eijswp0238.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  SWOPEC (Stockholm Working Papers)
+                  SWOPEC (PDF)
                 </a>
               </div>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { inflationData } from "./lam-phat-data";
+import { gdpGrowthData } from "./gdp-growth-data";
 
 export default function TongQuan({
   expandedYear,
@@ -8,6 +9,7 @@ export default function TongQuan({
   expandedYear: number | null;
   setExpandedYear: (year: number | null) => void;
 }) {
+  // Inflation chart data
   const maxRate = Math.max(...inflationData.map((d) => d.rate));
   const chartWidth = 800;
   const chartHeight = 400;
@@ -23,6 +25,20 @@ export default function TongQuan({
   });
 
   const polylinePoints = points.map((p) => `${p.x},${p.y}`).join(" ");
+
+  // GDP growth chart data
+  const maxGdpRate = Math.max(...gdpGrowthData.map((d) => Math.abs(d.rate)));
+  const minGdpRate = Math.min(...gdpGrowthData.map((d) => d.rate));
+  const gdpXStep = width / (gdpGrowthData.length - 1);
+  const zeroY = margin.top + height / 2; // Middle line for 0%
+
+  const gdpPoints = gdpGrowthData.map((data, index) => {
+    const x = margin.left + index * gdpXStep;
+    const y = zeroY - (data.rate / (maxGdpRate * 2)) * height;
+    return { x, y, year: data.year, rate: data.rate, note: data.note };
+  });
+
+  const gdpPolylinePoints = gdpPoints.map((p) => `${p.x},${p.y}`).join(" ");
 
   return (
     <>
@@ -44,30 +60,30 @@ export default function TongQuan({
           <div className="bg-blue-50 rounded-md p-6 shadow-md">
             <h3 className="font-bold text-blue-900 mb-3">Tăng Giá</h3>
             <p className="text-gray-700 text-sm mb-2">
-              Tăng giá trung bình <strong>4-6 lần</strong>: gạo ~10 lần, thực
-              phẩm ~3-5 lần
+              Tăng giá mạnh các hàng hóa thiết yếu: gạo tăng nhiều lần, thực
+              phẩm tăng cao
             </p>
-            <p className="text-blue-600 font-semibold text-xl">+400-600%</p>
-            <p className="text-xs text-gray-500 mt-1">Gạo từ 0.6 → 6 đồng/kg</p>
+            <p className="text-blue-600 font-semibold text-xl">Tăng gấp nhiều lần</p>
+            <p className="text-xs text-gray-500 mt-1">Theo Quyết định 217-HĐBT</p>
           </div>
           <div className="bg-green-50 rounded-md p-6 shadow-md">
             <h3 className="font-bold text-green-900 mb-3">Tăng Lương</h3>
             <p className="text-gray-700 text-sm mb-2">
-              Lương danh nghĩa tăng <strong>~2-3 lần</strong>, nhưng giá trị
-              thực giảm <strong className="text-red-600">60-70%</strong>
+              Lương danh nghĩa tăng, nhưng giá trị
+              thực <strong className="text-red-600">giảm mạnh</strong>
             </p>
-            <p className="text-green-600 font-semibold text-xl">+200-300%</p>
+            <p className="text-green-600 font-semibold text-xl">Tăng không theo kịp giá</p>
             <p className="text-xs text-red-600 mt-1 font-semibold">
-              Giá trị thực: -60-70%
+              Đời sống giảm sút
             </p>
           </div>
           <div className="bg-purple-50 rounded-md p-6 shadow-md">
             <h3 className="font-bold text-purple-900 mb-3">Phát hành Tiền</h3>
             <p className="text-gray-700 text-sm mb-2">
-              In tiền tăng <strong>~500-600%</strong> (M1) trong 12 tháng để trả
-              lương, bù đắp thâm hụt
+              In tiền tăng mạnh để trả
+              lương, bù đắp thâm hụt ngân sách
             </p>
-            <p className="text-purple-600 font-semibold text-xl">+587%</p>
+            <p className="text-purple-600 font-semibold text-xl">Tăng rất cao</p>
           </div>
         </div>
         <div className="bg-red-100 rounded-md p-6 shadow-md">
@@ -209,6 +225,132 @@ export default function TongQuan({
               <li>Phải đổi USD, vàng để giữ giá trị</li>
               <li>Xếp hàng cả ngày vẫn không mua được hàng</li>
               <li>Nhiều người phải bỏ thành phố về quê</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* GDP Growth Chart */}
+      <div className="bg-white rounded-md shadow-md p-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          Tăng Trưởng GDP 1976-1986 - Khủng Hoảng Kinh Tế
+        </h2>
+        <div className="mb-8">
+          <svg
+            className="w-full h-96"
+            viewBox={`0 0 ${chartWidth} ${chartHeight}`}
+            preserveAspectRatio="xMidYMid meet"
+          >
+            {/* X-axis */}
+            <line
+              x1={margin.left}
+              y1={zeroY}
+              x2={margin.left + width}
+              y2={zeroY}
+              stroke="gray"
+              strokeWidth="2"
+            />
+            {/* Y-axis */}
+            <line
+              x1={margin.left}
+              y1={margin.top}
+              x2={margin.left}
+              y2={margin.top + height}
+              stroke="gray"
+            />
+            {/* Zero line label */}
+            <text
+              x={margin.left - 30}
+              y={zeroY + 5}
+              textAnchor="middle"
+              fontSize="12"
+              fill="gray"
+            >
+              0%
+            </text>
+            {/* Line */}
+            <polyline
+              points={gdpPolylinePoints}
+              stroke="#2563eb"
+              fill="none"
+              strokeWidth="3"
+            />
+            {gdpPoints.map((p, index) => (
+              <g key={index}>
+                <title>{`${p.year}: ${p.rate}% - ${p.note}`}</title>
+                <circle
+                  cx={p.x}
+                  cy={p.y}
+                  r="6"
+                  fill={p.rate < 0 ? "#dc2626" : "#2563eb"}
+                  className="cursor-pointer"
+                  onClick={() =>
+                    setExpandedYear(expandedYear === p.year ? null : p.year)
+                  }
+                />
+                <text
+                  x={p.x}
+                  y={p.y - 15}
+                  textAnchor="middle"
+                  fontSize="14"
+                  fill={p.rate < 0 ? "#dc2626" : "#2563eb"}
+                  fontWeight="bold"
+                >
+                  {p.rate}%
+                </text>
+                <text
+                  x={p.x}
+                  y={margin.top + height + 20}
+                  textAnchor="middle"
+                  fontSize="14"
+                  fill="gray"
+                >
+                  {p.year}
+                </text>
+              </g>
+            ))}
+          </svg>
+          <div className="mt-4 text-sm text-gray-600 text-center">
+            Tỷ lệ Tăng trưởng GDP (%)
+          </div>
+        </div>
+        {expandedYear !== null && (
+          <div className="mt-4 p-4 bg-gray-50 rounded-md shadow-md">
+            {(() => {
+              const gdpData = gdpGrowthData.find((d) => d.year === expandedYear);
+              return gdpData ? (
+                <>
+                  <strong>{gdpData.year}:</strong> {gdpData.rate}% - {gdpData.note}
+                </>
+              ) : null;
+            })()}
+          </div>
+        )}
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-blue-50 rounded-md p-6 shadow-md">
+            <h3 className="font-semibold text-blue-900 mb-3">
+              Tăng Trưởng Không Ổn Định
+            </h3>
+            <div className="space-y-2 text-gray-700 text-sm">
+              <p>
+                <strong>1976:</strong> Tăng trưởng cao 16.8% sau thống nhất
+              </p>
+              <p>
+                <strong>1980:</strong> Suy thoái -2.9% (GDP giảm)
+              </p>
+              <p>
+                <strong>1986:</strong> Chỉ còn 2.8%, khủng hoảng toàn diện
+              </p>
+            </div>
+          </div>
+          <div className="bg-red-50 rounded-md p-6 shadow-md">
+            <h3 className="font-semibold text-red-900 mb-3">
+              Nguyên Nhân Suy Giảm
+            </h3>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li>Chiến tranh biên giới tiêu hao nguồn lực</li>
+              <li>Cơ chế bao cấp kém hiệu quả</li>
+              <li>Cô lập quốc tế, mất viện trợ</li>
+              <li>Cải cách giá-lương-tiền thất bại (1985)</li>
             </ul>
           </div>
         </div>

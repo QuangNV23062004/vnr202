@@ -23,8 +23,8 @@ export default function MocThoiGian() {
               </h3>
               <p className="text-gray-700">
                 Quân đội Việt Nam tiến vào Campuchia (25/12/1978), lật đổ chế độ
-                Khmer Đỏ (Phnom Penh 7/1/1979). Bắt đầu giai đoạn đóng quân binh
-                sĩ tại Campuchia (peak ~200,000) kéo dài 10 năm.
+                Khmer Đỏ (Phnom Penh 7/1/1979).                 Bắt đầu giai đoạn đóng quân binh
+                sĩ tại Campuchia (peak ~200,000 năm 1980, ~180,000 năm 1984) kéo dài 10 năm.
               </p>
             </div>
           </div>
@@ -80,8 +80,8 @@ export default function MocThoiGian() {
               <p className="text-gray-700">
                 Phương Tây và ASEAN áp đặt cấm vận kinh tế toàn diện (UNGA
                 Resolution S/13027, 1979). Nhật Bản và Thụy Điển đình chỉ viện
-                trợ 1979. Việt Nam bị cô lập ngoại giao, phụ thuộc ~80-90% vào
-                viện trợ từ Liên Xô.
+                trợ 1979. Việt Nam bị cô lập ngoại giao, phụ thuộc nặng nề vào
+                viện trợ Liên Xô: ~75% đầu tư công, ~70% ngoại thương, ~90% nguyên liệu chính (peak giữa 1980s).
               </p>
             </div>
           </div>
