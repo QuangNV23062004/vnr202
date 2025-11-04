@@ -136,7 +136,7 @@ export default function ThamKhao() {
                   định từ 1986, lạm phát nghiêm trọng và điều chỉnh chính sách.
                 </p>
                 <a
-                  href="https://www.elibrary.imf.org/view/journals/001/1991/083/article-A001-en.xml"
+                  href="https://www.elibrary.imf.org/view/journals/001/1993/046/001.1993.issue-046-en.xml"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
