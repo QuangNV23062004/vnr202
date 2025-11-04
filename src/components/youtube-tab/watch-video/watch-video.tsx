@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import Header from "../common/header";
 import { Video } from "../common/video-grids";
 import NotFoundYoutube from "../common/not-found";
+import { useTabs } from "@/context/tab-context";
 
 export default function WatchPage({ id }: { id: string }) {
   const [video, setVideo] = useState<Video | null>(null);
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState(true);
-
+  const { updateCurrentTabAddress } = useTabs();
   useEffect(() => {
     const fetchVideos = async () => {
       try {
@@ -94,10 +95,11 @@ export default function WatchPage({ id }: { id: string }) {
           </h3>
           <div className="space-y-3">
             {recommendedVideos.map((vid) => (
-              <a
-                key={vid.id}
-                href={`/watch/${vid.id}`}
+              <button
                 className="flex gap-2 hover:opacity-80 transition-opacity"
+                onClick={() => {
+                  updateCurrentTabAddress(`www.youtube.com/watch?v=${vid.id}`);
+                }}
               >
                 <div className="w-32 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-gray-200">
                   <img
@@ -113,7 +115,7 @@ export default function WatchPage({ id }: { id: string }) {
                   <p className="text-xs text-gray-600 mt-1">{vid.channel}</p>
                   <p className="text-xs text-gray-600">{vid.views} views</p>
                 </div>
-              </a>
+              </button>
             ))}
           </div>
         </div>
