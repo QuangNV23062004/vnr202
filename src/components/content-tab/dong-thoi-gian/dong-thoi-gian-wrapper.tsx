@@ -16,7 +16,7 @@ export default function DongThoiGian() {
       <section className="relative py-20 px-4 overflow-hidden min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://cdnphoto.dantri.com.vn/xnAF_B743goxlVNqdp-3kanf6Mk=/zoom/1200_630/2022/01/14/nhung-ky-uc-hanh-phuc-don-so-thoi-bao-cap-crop-1642125377352.jpeg"
+            src="https://thanhnien.mediacdn.vn/Uploaded/congthang/2015_05_17/temphieu_PUHU.jpg"
             alt="Background"
             className="w-full h-full object-cover"
             style={{ filter: "brightness(0.6) contrast(1.1)" }}
