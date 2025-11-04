@@ -66,7 +66,7 @@ export default function CaiCachGiaLuongTien() {
       </div>
 
       {/* Tab Navigation */}
-      <div className="bg-white border-b sticky top-0 z-10 shadow-sm">
+      <div className="bg-white border-b sticky top-15 z-10 shadow-sm">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex gap-6">
             <button
