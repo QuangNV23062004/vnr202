@@ -26,7 +26,7 @@ export default function ThamKhao() {
                   kinh tế
                 </p>
                 <a
-                  href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-v/bao-cao-chinh-tri-cua-ban-chap-hanh-trung-uong-khoa-iv-tai-dai-hoi-dai-bieu-toan-quoc-lan-thu-v-cua-dang-1498"
+                  href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-vi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
