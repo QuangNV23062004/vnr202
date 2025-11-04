@@ -139,9 +139,7 @@ export default function ThamKhao() {
                   Wikipedia. (n.d.). <em>Economic history of Vietnam</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Chi tiết khủng hoảng 1976-1986: lạm
-                  phát, năng suất thấp, thiếu hàng hóa. Miền Bắc kế hoạch hóa vs
-                  miền Nam thị trường tự do.
+                  <strong>Nội dung:</strong> Tổng quan khủng hoảng kinh tế 1976-1986.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/Economic_history_of_Vietnam"
@@ -159,9 +157,7 @@ export default function ThamKhao() {
                   Wikipedia. (n.d.). <em>Đổi Mới</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Lạm phát {">"}700%, tăng trưởng
-                  chậm dẫn đến Đổi Mới 1986. Hậu quả bao cấp: lạm phát ẩn, chợ
-                  đen.
+                  <strong>Nội dung:</strong> Tổng quan về chính sách Đổi Mới và bối cảnh kinh tế.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/%C4%90%E1%BB%95i_M%E1%BB%9Bi"
