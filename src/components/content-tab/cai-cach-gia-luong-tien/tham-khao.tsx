@@ -107,9 +107,7 @@ export default function ThamKhao() {
                 <h4 className="font-semibold text-gray-900 mb-1">
                   Báo cáo Ngân hàng Nhà nước (1986)
                 </h4>
-                <p className="text-sm text-gray-700 mb-2">
-                  Lạm phát 774.7%
-                </p>
+                <p className="text-sm text-gray-700 mb-2">Lạm phát 774.7%</p>
                 <a
                   href="https://www.sbv.gov.vn"
                   target="_blank"
@@ -134,7 +132,8 @@ export default function ThamKhao() {
                   IMF. (1991). <em>Vietnam: A Case Study in Economic Reform</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Xác nhận giai đoạn cải cách và ổn định từ 1986, lạm phát nghiêm trọng và điều chỉnh chính sách.
+                  <strong>Nội dung:</strong> Xác nhận giai đoạn cải cách và ổn
+                  định từ 1986, lạm phát nghiêm trọng và điều chỉnh chính sách.
                 </p>
                 <a
                   href="https://www.elibrary.imf.org/view/journals/001/1991/083/article-A001-en.xml"
@@ -150,15 +149,24 @@ export default function ThamKhao() {
               <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">
                   Vietnam50.us. (n.d.).{" "}
-                  <em>A Comparative Review of Vietnam's Economic Performance and Policy Between 1975 and 2024</em>
+                  <em>
+                    A Comparative Review of Vietnam's Economic Performance and
+                    Policy Between 1975 and 2024
+                  </em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Dữ liệu kinh tế chính thức 1976-1986:
+                  <strong>Nội dung:</strong> Dữ liệu kinh tế chính thức
+                  1976-1986:
                 </p>
                 <ul className="text-xs text-gray-600 mb-2 ml-4 list-disc">
                   <li>CPI (lạm phát): 1986 đạt 774.7% (cao nhất lịch sử)</li>
-                  <li>GDP growth rates: Từ 16.8% (1976) xuống -2.9% (1980), chỉ còn 2.8% (1986)</li>
-                  <li>GDP deflator: Phản ánh lạm phát trong toàn bộ nền kinh tế</li>
+                  <li>
+                    GDP growth rates: Từ 16.8% (1976) xuống -2.9% (1980), chỉ
+                    còn 2.8% (1986)
+                  </li>
+                  <li>
+                    GDP deflator: Phản ánh lạm phát trong toàn bộ nền kinh tế
+                  </li>
                 </ul>
                 <a
                   href="https://vietnam50.us/Home/reports/a-comparative-review-of-vietnams-economic-performance-and-policy-between-1975-and-2024/"
@@ -177,7 +185,8 @@ export default function ThamKhao() {
                   <em>Inflation, consumer prices (annual %) - Vietnam</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Cơ sở dữ liệu lạm phát World Bank. Dữ liệu công khai bắt đầu từ năm 1996.
+                  <strong>Nội dung:</strong> Cơ sở dữ liệu lạm phát World Bank.
+                  Dữ liệu công khai bắt đầu từ năm 1996.
                 </p>
                 <a
                   href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=VN"
@@ -195,7 +204,8 @@ export default function ThamKhao() {
                   Wikipedia. (n.d.). <em>Economic history of Vietnam</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Tổng quan về lịch sử kinh tế và cải cách Việt Nam.
+                  <strong>Nội dung:</strong> Tổng quan về lịch sử kinh tế và cải
+                  cách Việt Nam.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/Economic_history_of_Vietnam"
@@ -213,7 +223,8 @@ export default function ThamKhao() {
                   Wikipedia. (n.d.). <em>Đổi Mới</em>
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Tổng quan về chính sách Đổi Mới và chuyển sang kinh tế thị trường định hướng XHCN.
+                  <strong>Nội dung:</strong> Tổng quan về chính sách Đổi Mới và
+                  chuyển sang kinh tế thị trường định hướng XHCN.
                 </p>
                 <a
                   href="https://en.wikipedia.org/wiki/%C4%90%E1%BB%95i_M%E1%BB%9Bi"
@@ -234,7 +245,8 @@ export default function ThamKhao() {
                   Yale University Press.
                 </p>
                 <p className="text-xs text-gray-600 mb-2">
-                  <strong>Nội dung:</strong> Bối cảnh lịch sử xã hội và kinh tế Việt Nam.
+                  <strong>Nội dung:</strong> Bối cảnh lịch sử xã hội và kinh tế
+                  Việt Nam.
                 </p>
                 <a
                   href="https://yalebooks.yale.edu/book/9780300170931/vietnam"
@@ -246,7 +258,6 @@ export default function ThamKhao() {
                   Yale Books
                 </a>
               </div>
-
             </div>
           </div>
         </div>

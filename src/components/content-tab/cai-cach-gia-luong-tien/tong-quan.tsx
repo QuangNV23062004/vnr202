@@ -63,16 +63,22 @@ export default function TongQuan({
               Tăng giá mạnh các hàng hóa thiết yếu: gạo tăng nhiều lần, thực
               phẩm tăng cao
             </p>
-            <p className="text-blue-600 font-semibold text-xl">Tăng gấp nhiều lần</p>
-            <p className="text-xs text-gray-500 mt-1">Theo Quyết định 217-HĐBT</p>
+            <p className="text-blue-600 font-semibold text-xl">
+              Tăng gấp nhiều lần
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              Theo Quyết định 217-HĐBT
+            </p>
           </div>
           <div className="bg-green-50 rounded-md p-6 shadow-md">
             <h3 className="font-bold text-green-900 mb-3">Tăng Lương</h3>
             <p className="text-gray-700 text-sm mb-2">
-              Lương danh nghĩa tăng, nhưng giá trị
-              thực <strong className="text-red-600">giảm mạnh</strong>
+              Lương danh nghĩa tăng, nhưng giá trị thực{" "}
+              <strong className="text-red-600">giảm mạnh</strong>
             </p>
-            <p className="text-green-600 font-semibold text-xl">Tăng không theo kịp giá</p>
+            <p className="text-green-600 font-semibold text-xl">
+              Tăng không theo kịp giá
+            </p>
             <p className="text-xs text-red-600 mt-1 font-semibold">
               Đời sống giảm sút
             </p>
@@ -80,10 +86,11 @@ export default function TongQuan({
           <div className="bg-purple-50 rounded-md p-6 shadow-md">
             <h3 className="font-bold text-purple-900 mb-3">Phát hành Tiền</h3>
             <p className="text-gray-700 text-sm mb-2">
-              In tiền tăng mạnh để trả
-              lương, bù đắp thâm hụt ngân sách
+              In tiền tăng mạnh để trả lương, bù đắp thâm hụt ngân sách
             </p>
-            <p className="text-purple-600 font-semibold text-xl">Tăng rất cao</p>
+            <p className="text-purple-600 font-semibold text-xl">
+              Tăng rất cao
+            </p>
           </div>
         </div>
         <div className="bg-red-100 rounded-md p-6 shadow-md">
@@ -228,6 +235,19 @@ export default function TongQuan({
             </ul>
           </div>
         </div>
+
+        <p className="text-sm text-gray-300">
+          (Các số liệu được rút ra từ việc quan sát biểu đồ này chỉ mang tính
+          tham khảo và tương đối, có thể không hoàn toàn chính xác. Biểu đồ gốc:{" "}
+          <a
+            href="https://vi.wikipedia.org/wiki/Kinh_t%E1%BA%BF_Vi%E1%BB%87t_Nam,_1976%E2%80%931986#/media/T%E1%BA%ADp_tin:Inflation_Vietnam_1976-1986_(Retail_price).png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            xem ở đây
+          </a>
+          )
+        </p>
       </div>
       {/* GDP Growth Chart */}
       <div className="bg-white rounded-md shadow-md p-8">
@@ -316,10 +336,13 @@ export default function TongQuan({
         {expandedYear !== null && (
           <div className="mt-4 p-4 bg-gray-50 rounded-md shadow-md">
             {(() => {
-              const gdpData = gdpGrowthData.find((d) => d.year === expandedYear);
+              const gdpData = gdpGrowthData.find(
+                (d) => d.year === expandedYear
+              );
               return gdpData ? (
                 <>
-                  <strong>{gdpData.year}:</strong> {gdpData.rate}% - {gdpData.note}
+                  <strong>{gdpData.year}:</strong> {gdpData.rate}% -{" "}
+                  {gdpData.note}
                 </>
               ) : null;
             })()}
