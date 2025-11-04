@@ -15,13 +15,15 @@ export default function TongQuan() {
           <Users className="w-8 h-8 text-orange-600 mb-3" />
           <h3 className="text-3xl font-bold text-gray-900 mb-1">~200,000</h3>
           <p className="text-gray-600 text-sm">
-            Quân số tại Campuchia (peak 1980s)
+            Quân số tại Campuchia (peak ~200k năm 1980, ~180k năm 1984)
           </p>
         </div>
         <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-amber-600">
           <TrendingDown className="w-8 h-8 text-amber-600 mb-3" />
-          <h3 className="text-3xl font-bold text-gray-900 mb-1">80-90%</h3>
-          <p className="text-gray-600 text-sm">Phụ thuộc viện trợ Liên Xô</p>
+          <h3 className="text-3xl font-bold text-gray-900 mb-1">~75%</h3>
+          <p className="text-gray-600 text-sm">
+            Đầu tư công phụ thuộc viện trợ Liên Xô (peak giữa 1980s)
+          </p>
         </div>
       </div>
 
@@ -64,8 +66,7 @@ export default function TongQuan() {
               <li className="flex gap-2">
                 <Circle className="w-4 h-4 text-red-600 fill-red-600 mt-0.5 shrink-0" />
                 <span>
-                  Duy trì 150,000-200,000 quân tại Campuchia (luân phiên, peak
-                  ~200,000)
+                  Duy trì 150,000-200,000 quân tại Campuchia (peak ~200,000 năm 1980, ~180,000 năm 1984)
                 </span>
               </li>
               <li className="flex gap-2">
@@ -133,7 +134,7 @@ export default function TongQuan() {
               <li>
                 • Mất đi viện trợ quốc tế (Nhật Bản, Thụy Điển đình chỉ 1979)
               </li>
-              <li>• Phụ thuộc ~80-90% vào viện trợ từ Liên Xô</li>
+              <li>• Phụ thuộc nặng nề vào viện trợ Liên Xô: ~75% đầu tư công, ~70% ngoại thương, ~90% nguyên liệu chính. Viện trợ Liên Xô tài trợ 95% sản lượng than của VN, 51% xi măng, 35% phát điện (peak giữa 1980s)</li>
             </ul>
           </div>
         </div>

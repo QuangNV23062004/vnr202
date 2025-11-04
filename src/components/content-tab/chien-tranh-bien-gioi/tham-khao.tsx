@@ -77,7 +77,7 @@ export default function ThamKhao() {
                 </h4>
                 <p className="text-xs text-gray-600 mb-2">
                   <strong>Nội dung:</strong> Xung đột 1977-1978, lật đổ Pol Pot.
-                  Việt Nam duy trì lực lượng lớn tại Campuchia (peak ~200,000),
+                  Việt Nam duy trì lực lượng lớn tại Campuchia (180,000 quân năm 1984, peak ~200,000 năm 1980),
                   gây thiệt hại về người đáng kể.
                 </p>
                 <a
@@ -88,6 +88,24 @@ export default function ThamKhao() {
                 >
                   <ExternalLink className="w-4 h-4" />
                   Xem tài liệu
+                </a>
+              </div>
+
+              <div className="border-l-4 border-indigo-500 pl-4 py-4 bg-indigo-50 rounded-r-lg">
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  Oxfam. (n.d.). <em>Development Aid Denied</em>
+                </h4>
+                <p className="text-xs text-gray-600 mb-2">
+                  <strong>Nội dung:</strong> Ước tính khoảng 140,000-200,000 quân Việt Nam tại Kampuchea (peak ~200,000 năm 1980).
+                </p>
+                <a
+                  href="https://oxfamilibrary.openrepository.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center gap-1"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Oxfam Library
                 </a>
               </div>
 
@@ -163,8 +181,10 @@ export default function ThamKhao() {
                 </p>
                 <p className="text-xs text-gray-600 mb-2">
                   <strong>Nội dung:</strong> Phân tích sự phụ thuộc nặng nề vào
-                  viện trợ Liên Xô (70% kim ngạch ngoại thương), và sự gián đoạn
-                  viện trợ từ phương Tây, Nhật Bản sau vấn đề Campuchia.
+                  viện trợ Liên Xô: ~75% đầu tư công, ~40% ngân sách, ~10% GDP, ~70% ngoại thương tại peak giữa 1980s. 
+                  Viện trợ Liên Xô tài trợ 95% sản lượng than của Việt Nam, 51% xi măng, 35% phát điện.
+                  Viện trợ Liên Xô ~USD 1 tỷ/năm vs phương Tây ~USD 100 triệu/năm.
+                  Sự gián đoạn viện trợ từ phương Tây, Nhật Bản sau vấn đề Campuchia.
                 </p>
                 <a
                   href="https://swopec.hhs.se/eijswp/abs/eijswp0226.htm"
